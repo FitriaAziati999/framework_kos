@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 02, 2020 at 02:05 PM
--- Server version: 10.1.39-MariaDB
--- PHP Version: 7.3.5
+-- Generation Time: May 02, 2020 at 06:20 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -292,7 +292,7 @@ CREATE TABLE `tipekamar` (
   `harga` int(10) NOT NULL,
   `penghuni` varchar(8) NOT NULL,
   `fasilitaskamar` varchar(100) NOT NULL,
-  `fotokamar` blob NOT NULL,
+  `fotokamar` varchar(30) NOT NULL,
   `id_kos` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -301,10 +301,9 @@ CREATE TABLE `tipekamar` (
 --
 
 INSERT INTO `tipekamar` (`id_kamar`, `ukuran`, `stok`, `harga`, `penghuni`, `fasilitaskamar`, `fotokamar`, `id_kos`) VALUES
-(1, '3X3', 4, 400000, '1 orang', 'spring bed, lemari', '', 1),
-(2, '4X4', 5, 550000, '1 orang', 'spring bed, lemari, kamar mandi dalam', '', 1),
-(18, '3X3', 7, 350000, '1 orang', 'spring bed, lemari', '', 2),
-(20, '3X4', 6, 450000, '1 orang', 'spring bed, lemari', '', 8);
+(2, '4X4', 5, 550000, '1 orang', 'spring bed, lemari, kamar mandi dalam', '01-thumbnail.jpg', 1),
+(18, '3X3', 7, 350000, '1 orang', 'spring bed, lemari', '02-thumbnail.jpg', 2),
+(20, '3X4', 6, 450000, '1 orang', 'spring bed, lemari', '03-thumbnail.jpg', 8);
 
 -- --------------------------------------------------------
 
@@ -332,7 +331,7 @@ INSERT INTO `wishlist` (`id_wishlist`, `id_penyewa`, `id_kos`) VALUES
 --
 DROP TABLE IF EXISTS `cari_kos`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `cari_kos`  AS  select `d`.`id_pemilik` AS `id_pemilik`,`d`.`namakos` AS `namakos`,`d`.`khususkos` AS `khususkos`,`p`.`userpem` AS `userpem`,`t`.`harga` AS `harga`,`t`.`stok` AS `stok` from ((`datakos` `d` join `pemilik` `p` on((`d`.`id_pemilik` = `p`.`id_pemilik`))) join `tipekamar` `t` on((`d`.`id_kos` = `t`.`id_kos`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `cari_kos`  AS  select `d`.`id_pemilik` AS `id_pemilik`,`d`.`namakos` AS `namakos`,`d`.`khususkos` AS `khususkos`,`p`.`userpem` AS `userpem`,`t`.`harga` AS `harga`,`t`.`stok` AS `stok` from ((`datakos` `d` join `pemilik` `p` on(`d`.`id_pemilik` = `p`.`id_pemilik`)) join `tipekamar` `t` on(`d`.`id_kos` = `t`.`id_kos`)) ;
 
 -- --------------------------------------------------------
 
@@ -350,7 +349,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `cari_kosss`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `cari_kosss`  AS  select `d`.`namakos` AS `namakos`,`d`.`alamatkos` AS `alamatkos`,`d`.`khususkos` AS `khususkos`,`t`.`stok` AS `stok`,`t`.`harga` AS `harga` from (`datakos` `d` join `tipekamar` `t` on((`d`.`id_kos` = `t`.`id_kos`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `cari_kosss`  AS  select `d`.`namakos` AS `namakos`,`d`.`alamatkos` AS `alamatkos`,`d`.`khususkos` AS `khususkos`,`t`.`stok` AS `stok`,`t`.`harga` AS `harga` from (`datakos` `d` join `tipekamar` `t` on(`d`.`id_kos` = `t`.`id_kos`)) ;
 
 -- --------------------------------------------------------
 
@@ -359,7 +358,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `cari_kost`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `cari_kost`  AS  select `d`.`id_pemilik` AS `id_pemilik`,`d`.`namakos` AS `namakos`,`d`.`khususkos` AS `khususkos`,`p`.`nopem` AS `nopem`,`t`.`harga` AS `harga`,`t`.`stok` AS `stok` from ((`datakos` `d` join `pemilik` `p` on((`d`.`id_pemilik` = `p`.`id_pemilik`))) join `tipekamar` `t` on((`d`.`id_kos` = `t`.`id_kos`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `cari_kost`  AS  select `d`.`id_pemilik` AS `id_pemilik`,`d`.`namakos` AS `namakos`,`d`.`khususkos` AS `khususkos`,`p`.`nopem` AS `nopem`,`t`.`harga` AS `harga`,`t`.`stok` AS `stok` from ((`datakos` `d` join `pemilik` `p` on(`d`.`id_pemilik` = `p`.`id_pemilik`)) join `tipekamar` `t` on(`d`.`id_kos` = `t`.`id_kos`)) ;
 
 -- --------------------------------------------------------
 
@@ -368,7 +367,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `data_kos`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `data_kos`  AS  select `d`.`id_pemilik` AS `id_pemilik`,`d`.`namakos` AS `namakos`,`d`.`khususkos` AS `khususkos`,`d`.`alamatkos` AS `alamatkos`,`t`.`harga` AS `harga`,`t`.`stok` AS `stok` from ((`datakos` `d` join `pemilik` `p` on((`d`.`id_pemilik` = `p`.`id_pemilik`))) join `tipekamar` `t` on((`d`.`id_kos` = `t`.`id_kos`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `data_kos`  AS  select `d`.`id_pemilik` AS `id_pemilik`,`d`.`namakos` AS `namakos`,`d`.`khususkos` AS `khususkos`,`d`.`alamatkos` AS `alamatkos`,`t`.`harga` AS `harga`,`t`.`stok` AS `stok` from ((`datakos` `d` join `pemilik` `p` on(`d`.`id_pemilik` = `p`.`id_pemilik`)) join `tipekamar` `t` on(`d`.`id_kos` = `t`.`id_kos`)) ;
 
 -- --------------------------------------------------------
 
@@ -377,7 +376,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `profile_penyewa`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `profile_penyewa`  AS  select `penyewa`.`id_penyewa` AS `id_penyewa`,`penyewa`.`userpen` AS `userpen`,`penyewa`.`passpen` AS `passpen`,`penyewa`.`fotopen` AS `fotopen`,`penyewa`.`jkpen` AS `jkpen`,`penyewa`.`pekerjaanpen` AS `pekerjaanpen`,`penyewa`.`nopen` AS `nopen`,`penyewa`.`alamatpen` AS `alamatpen`,`penyewa`.`emailpen` AS `emailpen`,`penyewa`.`ktppen` AS `ktppen` from `penyewa` where (`penyewa`.`id_penyewa` = '1') ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `profile_penyewa`  AS  select `penyewa`.`id_penyewa` AS `id_penyewa`,`penyewa`.`userpen` AS `userpen`,`penyewa`.`passpen` AS `passpen`,`penyewa`.`fotopen` AS `fotopen`,`penyewa`.`jkpen` AS `jkpen`,`penyewa`.`pekerjaanpen` AS `pekerjaanpen`,`penyewa`.`nopen` AS `nopen`,`penyewa`.`alamatpen` AS `alamatpen`,`penyewa`.`emailpen` AS `emailpen`,`penyewa`.`ktppen` AS `ktppen` from `penyewa` where `penyewa`.`id_penyewa` = '1' ;
 
 -- --------------------------------------------------------
 
@@ -386,7 +385,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `profile_penyewakos`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `profile_penyewakos`  AS  select `penyewa`.`id_penyewa` AS `id_penyewa`,`penyewa`.`userpen` AS `userpen`,`penyewa`.`passpen` AS `passpen`,`penyewa`.`fotopen` AS `fotopen`,`penyewa`.`jkpen` AS `jkpen`,`penyewa`.`pekerjaanpen` AS `pekerjaanpen`,`penyewa`.`nopen` AS `nopen`,`penyewa`.`alamatpen` AS `alamatpen`,`penyewa`.`emailpen` AS `emailpen`,`penyewa`.`ktppen` AS `ktppen` from `penyewa` where (`penyewa`.`alamatpen` = 'pasuruan') ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `profile_penyewakos`  AS  select `penyewa`.`id_penyewa` AS `id_penyewa`,`penyewa`.`userpen` AS `userpen`,`penyewa`.`passpen` AS `passpen`,`penyewa`.`fotopen` AS `fotopen`,`penyewa`.`jkpen` AS `jkpen`,`penyewa`.`pekerjaanpen` AS `pekerjaanpen`,`penyewa`.`nopen` AS `nopen`,`penyewa`.`alamatpen` AS `alamatpen`,`penyewa`.`emailpen` AS `emailpen`,`penyewa`.`ktppen` AS `ktppen` from `penyewa` where `penyewa`.`alamatpen` = 'pasuruan' ;
 
 -- --------------------------------------------------------
 
@@ -395,7 +394,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `profil_penyewa`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `profil_penyewa`  AS  select `penyewa`.`id_penyewa` AS `id_penyewa`,`penyewa`.`userpen` AS `userpen`,`penyewa`.`passpen` AS `passpen`,`penyewa`.`fotopen` AS `fotopen`,`penyewa`.`jkpen` AS `jkpen`,`penyewa`.`pekerjaanpen` AS `pekerjaanpen`,`penyewa`.`nopen` AS `nopen`,`penyewa`.`alamatpen` AS `alamatpen`,`penyewa`.`emailpen` AS `emailpen`,`penyewa`.`ktppen` AS `ktppen` from `penyewa` where (`penyewa`.`alamatpen` = 'pasuruan') ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `profil_penyewa`  AS  select `penyewa`.`id_penyewa` AS `id_penyewa`,`penyewa`.`userpen` AS `userpen`,`penyewa`.`passpen` AS `passpen`,`penyewa`.`fotopen` AS `fotopen`,`penyewa`.`jkpen` AS `jkpen`,`penyewa`.`pekerjaanpen` AS `pekerjaanpen`,`penyewa`.`nopen` AS `nopen`,`penyewa`.`alamatpen` AS `alamatpen`,`penyewa`.`emailpen` AS `emailpen`,`penyewa`.`ktppen` AS `ktppen` from `penyewa` where `penyewa`.`alamatpen` = 'pasuruan' ;
 
 --
 -- Indexes for dumped tables
