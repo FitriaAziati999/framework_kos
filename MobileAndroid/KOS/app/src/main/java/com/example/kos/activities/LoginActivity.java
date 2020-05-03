@@ -1,4 +1,4 @@
-package com.example.kos;
+package com.example.kos.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -18,6 +18,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.kos.activities.MainActivity;
+import com.example.kos.R;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -61,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
         RegisButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(),MainActivity.class));
+                startActivity(new Intent(getBaseContext(), MainActivity.class));
             }
         });
     }

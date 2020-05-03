@@ -1,13 +1,14 @@
-package com.example.kos;
+package com.example.kos.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
-import com.squareup.picasso.Picasso;
+
+import com.example.kos.models.ModelData;
+import com.example.kos.R;
 
 import java.util.ArrayList;
 
