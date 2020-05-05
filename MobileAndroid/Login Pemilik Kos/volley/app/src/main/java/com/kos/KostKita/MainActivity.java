@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     String NameHolder, EmailHolder, UsernameHolder, alamatHolder, NoHPHolder,  NikKtpHolder, PasswordHolder, Password2Holder;
     ProgressDialog progressDialog;
-    String HttpUrl = "http://192.168.1.3/vollay/user_registration.php";
+    String HttpUrl = "http://192.168.100.37/vollay/user_registration.php";
     Boolean CheckEditText;
 
     @Override
