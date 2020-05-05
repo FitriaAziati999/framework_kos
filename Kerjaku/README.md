@@ -1,2 +1,0 @@
-# kerja
-Perbaikan desain

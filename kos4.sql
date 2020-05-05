@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 30, 2020 at 06:37 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: May 06, 2020 at 12:21 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_kost`
+-- Database: `kos4`
 --
 
 -- --------------------------------------------------------
@@ -35,14 +35,14 @@ CREATE TABLE `admin` (
   `noadmin` varchar(13) NOT NULL,
   `emailadmin` varchar(20) NOT NULL,
   `alamatadmin` varchar(50) NOT NULL,
-  `ktpadmin` varchar(20) NOT NULL
+  `nikadmin` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id_admin`, `useradmin`, `passadmin`, `noadmin`, `emailadmin`, `alamatadmin`, `ktpadmin`) VALUES
+INSERT INTO `admin` (`id_admin`, `useradmin`, `passadmin`, `noadmin`, `emailadmin`, `alamatadmin`, `nikadmin`) VALUES
 (1, 'yais01', 'yais123', '083134920109', 'yais@gamil.com', 'jember', ''),
 (2, 'ketrinamarga01', 'ketrina123', '081931594351', 'ketrina@gmail.com', 'jember', ''),
 (5, 'ijak1409', 'ijak123', '085335718044', 'ijka@gmail.com', 'jember', '');
@@ -57,7 +57,6 @@ CREATE TABLE `datakos` (
   `id_kos` int(11) NOT NULL,
   `id_pemilik` int(11) NOT NULL,
   `namakos` varchar(20) NOT NULL,
-  `fotokos` varchar(48) NOT NULL,
   `alamatkos` varchar(50) NOT NULL,
   `khususkos` varchar(10) NOT NULL,
   `fasilitaskos` varchar(100) NOT NULL,
@@ -69,10 +68,10 @@ CREATE TABLE `datakos` (
 -- Dumping data for table `datakos`
 --
 
-INSERT INTO `datakos` (`id_kos`, `id_pemilik`, `namakos`, `fotokos`, `alamatkos`, `khususkos`, `fasilitaskos`, `lingkungankos`, `peraturankos`) VALUES
-(1, 1, 'Kos oren', '01-thumbnail.jpg', 'Mastrip Timur 80 c sumber sari,jember', 'putra', 'tempat parkir, dapur, wifi,tempat jemur,ruang cuci,ruang tamu', 'Dekat mushola', 'Tidak boleh membawa anak perempuan ke kamar'),
-(2, 1, 'Kos oren', '02-thumbnail.jpg', 'Mastrip Timur 85 c sumber sari,jember', 'putri', 'Spring bed,lemari,kamar mandi dalam', 'Dekat mushola', 'Tidak boleh membawa anak laki-laki ke kamar'),
-(8, 2, 'kos bidadari', '03-thumbnail.jpg', 'Batu raden A7', 'putri', 'spring bed, lemari', 'Dekat Foodland, indomaret ', 'Tidak boleh membawa anak laki-laki ke kamar');
+INSERT INTO `datakos` (`id_kos`, `id_pemilik`, `namakos`, `alamatkos`, `khususkos`, `fasilitaskos`, `lingkungankos`, `peraturankos`) VALUES
+(1, 1, 'Kos oren', 'Mastrip Timur 80 c sumber sari,jember', 'putra', 'tempat parkir, dapur, wifi,tempat jemur,ruang cuci,ruang tamu', 'Dekat mushola', 'Tidak boleh membawa anak perempuan ke kamar'),
+(2, 1, 'Kos oren', 'Mastrip Timur 85 c sumber sari,jember', 'putri', 'Spring bed,lemari,kamar mandi dalam', 'Dekat mushola', 'Tidak boleh membawa anak laki-laki ke kamar'),
+(8, 2, 'kos bidadari', 'Batu raden A7', 'putri', 'spring bed, lemari', 'Dekat Foodland, indomaret ', 'Tidak boleh membawa anak laki-laki ke kamar');
 
 -- --------------------------------------------------------
 
@@ -84,19 +83,21 @@ CREATE TABLE `pemilik` (
   `id_pemilik` int(11) NOT NULL,
   `userpem` varchar(20) NOT NULL,
   `passpem` varchar(20) NOT NULL,
+  `namapem` varchar(25) NOT NULL,
+  `namapen` varchar(25) NOT NULL,
   `alamatpem` varchar(50) NOT NULL,
   `nopem` varchar(13) NOT NULL,
   `emailpem` varchar(20) NOT NULL,
-  `ktppem` varchar(20) NOT NULL
+  `nikpem` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `pemilik`
 --
 
-INSERT INTO `pemilik` (`id_pemilik`, `userpem`, `passpem`, `alamatpem`, `nopem`, `emailpem`, `ktppem`) VALUES
-(1, 'rammaboom', 'ramma123', 'Blitar', '083854132888', 'sindyra@gmail.com', ''),
-(2, 'indyraaw', 'indy123', 'Mastrip timur 80 C jember', '081333125829', 'rammaboom99@gmail.co', '');
+INSERT INTO `pemilik` (`id_pemilik`, `userpem`, `passpem`, `namapem`, `namapen`, `alamatpem`, `nopem`, `emailpem`, `nikpem`) VALUES
+(1, 'rammaboom', 'ramma123', '', '', 'Blitar', '083854132888', 'sindyra@gmail.com', ''),
+(2, 'indyraaw', 'indy123', '', '', 'Mastrip timur 80 C jember', '081333125829', 'rammaboom99@gmail.co', '');
 
 -- --------------------------------------------------------
 
@@ -108,22 +109,25 @@ CREATE TABLE `penyewa` (
   `id_penyewa` int(11) NOT NULL,
   `userpen` varchar(20) NOT NULL,
   `passpen` varchar(100) NOT NULL,
+  `namapen` varchar(25) NOT NULL,
   `fotopen` varchar(25) NOT NULL,
   `jkpen` varchar(10) NOT NULL,
   `pekerjaanpen` varchar(20) NOT NULL,
   `nopen` varchar(13) NOT NULL,
   `alamatpen` varchar(50) NOT NULL,
   `emailpen` varchar(20) NOT NULL,
-  `ktppen` varchar(20) NOT NULL
+  `nikpen` varchar(16) NOT NULL,
+  `role_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `penyewa`
 --
 
-INSERT INTO `penyewa` (`id_penyewa`, `userpen`, `passpen`, `fotopen`, `jkpen`, `pekerjaanpen`, `nopen`, `alamatpen`, `emailpen`, `ktppen`) VALUES
-(1, 'Bayupamungkan2008', 'bay123', '', 'laki-laki', 'pelajar', '081232355252', 'pasuruan', 'bayu@gmail.com', ''),
-(2, 'fitriaAz', 'tria123', '', 'Perempuan', 'Mahasiswa', '0812323552552', 'Pasuruan', 'fitriaaziati@gmail.c', '');
+INSERT INTO `penyewa` (`id_penyewa`, `userpen`, `passpen`, `namapen`, `fotopen`, `jkpen`, `pekerjaanpen`, `nopen`, `alamatpen`, `emailpen`, `nikpen`, `role_id`) VALUES
+(1, 'Bayupamungkan2008', 'bay123', '0', '', 'laki-laki', 'pelajar', '081232355252', 'pasuruan', 'bayu@gmail.com', '', 0),
+(2, 'fitriaAz', 'tria123', '0', '', 'Perempuan', 'Mahasiswa', '0812323552552', 'Pasuruan', 'fitriaaziati@gmail.c', '', 0),
+(3, 'faizah89', '67f27ddf40a0dd24fe50fbe33c4460bb', 'faizah', 'default.jpg', '1', '1', '081232355252', 'tenggilis rejo', 'fitriaazaiti@gmail.c', '0899123123123123', 2);
 
 -- --------------------------------------------------------
 
@@ -161,7 +165,7 @@ CREATE TABLE `tipekamar` (
   `harga` int(10) NOT NULL,
   `penghuni` varchar(8) NOT NULL,
   `fasilitaskamar` varchar(100) NOT NULL,
-  `fotokamar` varchar(25) NOT NULL,
+  `fotokamar` blob NOT NULL,
   `id_kos` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -170,10 +174,10 @@ CREATE TABLE `tipekamar` (
 --
 
 INSERT INTO `tipekamar` (`id_kamar`, `ukuran`, `stok`, `harga`, `penghuni`, `fasilitaskamar`, `fotokamar`, `id_kos`) VALUES
-(1, '3X3', 4, 400000, '1 orang', 'spring bed, lemari', 'kos.jpg', 1),
-(2, '4X4', 5, 550000, '1 orang', 'spring bed, lemari, kamar mandi dalam', 'kos.jpg', 1),
-(18, '3X3', 7, 350000, '1 orang', 'spring bed, lemari', 'kos.jpg', 2),
-(20, '3X4', 6, 450000, '1 orang', 'spring bed, lemari', 'kos.jpg', 8);
+(1, '3X3', 4, 400000, '1 orang', 'spring bed, lemari', '', 1),
+(2, '4X4', 5, 550000, '1 orang', 'spring bed, lemari, kamar mandi dalam', '', 1),
+(18, '3X3', 7, 350000, '1 orang', 'spring bed, lemari', '', 2),
+(20, '3X4', 6, 450000, '1 orang', 'spring bed, lemari', '', 8);
 
 -- --------------------------------------------------------
 
@@ -270,7 +274,7 @@ ALTER TABLE `pemilik`
 -- AUTO_INCREMENT for table `penyewa`
 --
 ALTER TABLE `penyewa`
-  MODIFY `id_penyewa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_penyewa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sewa`
