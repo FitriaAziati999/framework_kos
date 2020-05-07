@@ -12,7 +12,10 @@
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme"
 		android:usesCleartextTraffic="true">
-		<activity android:name=".UpdateProfil"></activity>
+		<activity android:name=".DetailDataKos"></activity>
+		<activity android:name=".EditDataKos" />
+		<activity android:name=".DataKos" />
+		<activity android:name=".UpdateProfil" />
 		<activity android:name=".ProfileActivity" />
 		<activity android:name=".MainActivity" />
 		<activity android:name=".LoginActivity">

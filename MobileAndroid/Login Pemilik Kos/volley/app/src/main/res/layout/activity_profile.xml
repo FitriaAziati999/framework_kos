@@ -5,7 +5,6 @@
 	xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
     tools:context=".ProfileActivity">
 
 	<View
@@ -80,12 +79,13 @@
 		android:gravity="center_horizontal" />
 
 	<RelativeLayout
+		android:id="@+id/relativeLayout"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.0"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/vbg"/>
+		app:layout_constraintTop_toBottomOf="@+id/vbg" />
 
 	<ScrollView
 		android:layout_width="match_parent"
@@ -100,18 +100,21 @@
 		android:layout_height="wrap_content"
 
 		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="36dp"
 		android:text="LOG OUT"
+		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
 		app:layout_constraintStart_toStartOf="parent"
-		tools:layout_editor_absoluteY="613dp"
 		tools:ignore="MissingConstraints" />
 
 	<RelativeLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:padding="20dp"
-		tools:layout_editor_absoluteX="0dp"
-		tools:layout_editor_absoluteY="247dp">
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/vbg">
 
 		<TextView
 			android:id="@+id/textView"
