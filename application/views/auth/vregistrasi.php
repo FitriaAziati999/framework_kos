@@ -38,11 +38,11 @@
 
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="text" class="form-control form-control-user" id="passpen" name="passpen" placeholder="Password" value="<?= set_value('passpen'); ?>">
+                                    <input type="password" class="form-control form-control-user" id="passpen" name="passpen" placeholder="Password" value="<?= set_value('passpen'); ?>">
                                     <?= form_error('passpen', '<small class="text-danger pl-2">', '</small>');  ?>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control form-control-user" id="passpen2" name="passpen2" placeholder="konfirmasi Password" value="<?= set_value('passpen2'); ?>">
+                                    <input type="password" class="form-control form-control-user" id="passpen2" name="passpen2" placeholder="konfirmasi Password" value="<?= set_value('passpen2'); ?>">
                                     <?= form_error('passpen2', '<small class="text-danger pl-2">', '</small>');  ?>
                                 </div>
                             </div>
@@ -65,8 +65,8 @@
 
                             <div class="form-group">
                                 <select id="jkpen" name="jkpen" class="custom-select form-control-user" size="-2" value="<?= set_value('jkpen'); ?>">
-                                    <option value="">Laki-Laki</option>
-                                    <option value="">Perempuan</option>
+                                    <option value="Laki-Laki">Laki-Laki</option>
+                                    <option value="Perempuan">Perempuan</option>
                                     <?= form_error('konfirmasipen', '<small class="text-danger pl-2">', '</small>');  ?>
                                 </select>
 

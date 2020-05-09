@@ -3,7 +3,7 @@
   <!-- Outer Row -->
   <div class="row justify-content-center">
 
-    <div class="col-lg-5">
+    <div class="col-lg-6">
 
       <div class="card o-hidden border-0 shadow-lg my-5">
         <div class="card-body p-0">
@@ -15,14 +15,15 @@
                 <div class="text-center">
                   <h1 class="h4 text-gray-900 mb-4">Login</h1>
                 </div>
+                <?= $this->session->flashdata('message');?>
                 <form class="user" method="post" action="<?= base_url('auth/login'); ?>">
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-user" id="emailpen" name="emailpen" placeholder="Enter you username." value="<?= set_value('emailpen') ?>">
+                    <input type="text" class="form-control form-control-user" id="emailpen" name="emailpen" placeholder="Masukkan Email anda." value="<?= set_value('emailpen'); ?>">
                     <?= form_error('emailpen', '<small class="text-danger pl-2">', '</small>');  ?>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-user" id="passpen" name="passpen" placeholder="Password" value="<?= set_value('passpen') ?>">
-                    <?= form_error('passpen', '<small class="text-danger pl-2">', '</small>');  ?>
+                    <input type="password" class="form-control form-control-user" id="passpen" name="passpen" placeholder="Password" value="<?= set_value('passpen'); ?>">
+                    <?= form_error('passpen1', '<small class="text-danger pl-2">', '</small>');  ?>
                   </div>
                   <div class="form-group">
                     <div class="text-left">

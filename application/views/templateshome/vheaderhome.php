@@ -16,7 +16,7 @@
   <!-- Custom styles for this template -->
   <link href="<?php echo base_url()?>/assets/assetshome/css/shop-homepage.css" rel="stylesheet">
 
-</head>
+  </head>
 <body>
 
   <!-- Navigation -->
@@ -29,21 +29,27 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link" href="<?php echo base_url('home/index')?>">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <a class="navbar-brand"></a> <form class="form-inline"> <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button> </form> 
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url('auth/registrasi')?>">Daftar</a>
+           </li> 
           <li class="nav-item">
-            <a class="nav-link" href="#">Daftar</a>
+            <a class="nav-link" href="<?php echo base_url('home/pusatbantuan')?>">Pusat Bantuan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pusat Bantuan</a>
-          </li>
+            <?php if ($this->session->userdata('userpen')){ ?>
+              <a class="nav-link" href="<?php echo base_url('user/dashboard')?>">Welcome  <?php echo $this->session->userdata('userpen')?></a>
+              <?php } else { ?>
+              <a  class="nav-link" href="<?php echo base_url('auth/login')?>"><span class="btn btn-sm btn-light">Login</span></a>
+              <?php } ?></li>
+          
+
         </ul>
       </div>
     </div>
   </nav>
+  

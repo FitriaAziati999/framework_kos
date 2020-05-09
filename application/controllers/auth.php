@@ -7,58 +7,98 @@ class Auth extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('form_validation');
+		$this->load->model('muser');
 	}
 
 	public function login()
 	{
-		$this->form_validation->set_rules('emailpen', 'email', 'required|trim');
-		$this->form_validation->set_rules('passpen', 'password', 'required|trim');
+		$this->form_validation->set_rules('emailpen', 'email', 'required|trim|valid_email',
+		[  
+			'required' => 'Harap Isi data terlebih daulu !',
+			'valid_email' => 'Harap menggunakan email yang valid'
+		]
+		);
+		$this->form_validation->set_rules('passpen', 'password', 'required|trim',
+		[
+			'required' => 'Harap Isi data terlebih daulu !']
+		);
 
 		if ($this->form_validation->run() == false) {
-			$this->load->view('templates/auth_header');
+			$data['title']='Kos kita-Login';
+			$this->load->view('templates/auth_header',$data);
 			$this->load->view('auth/vlogin');
 			$this->load->view('templates/auth_footer');
 		} else {
-
-			$this->_login();
-		}
-	}
-	private function _login()
-	{
+		//$this->_login();
 		$emailpen = $this->input->post('emailpen');
-
-		$passpen = $this->input->post('passpen');
-
-
-		$user = $this->db->insert('penyewa', ['emailpen' => $emailpen])->row_array();
-		//var_dump($user);
-		//die;
-		//jika user adajw
-
-		if ($user) {
-			//jika user aktif
-			if ($user['is_active'] == 1) {
-				//cek password
-				if (password_verify($passpen, $user['passpen'])) {
-				} else {
-					//jika password tidak sesuai
-					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-            		Username dan password tidak sesuai! </div>');
-					redirect('auth/login');
-				}
-			} else {
-				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-            	Akun email anda sudah tidak aktif</div>');
-				redirect('auth/login');
-			}
-		} else {
-			//jika user tidak ada
+		$passpen = md5($this->input->post('passpen'));	
+		$cek = $this->muser->cek_login($emailpen, $passpen);
+		//var_dump($cek );
+		if ($cek==FALSE){
+		
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-            Email anda belum terdaftar, silahkan daftar terlebih dahulu!</div>');
-			redirect('auth/login');
+        	Email atau Password tidak sesuai !
+       		</div>');
+		redirect('auth/login');
+		}else{
+			$this->session->set_userdata('userpen', $cek->userpen);
+			$this->session->set_userdata('namapen', $cek->namapen);
+			$this->session->set_userdata('role_id', $cek->role_id);
+			switch($cek->role_id){
+			case 1 : 	redirect('admin/dashbord');
+							break;
+			case 2 : 	redirect('home/index');
+						//	break;
+				default: break;
+				}
+			}
 		}
 	}
-
+	
+	public function logout ()
+	{
+		$this->session->session_destroy();
+		//redirect('home/index');
+	}
+		//private function _login()
+		//{
+		//	$emailpen = $this->input->post('emailpen');
+		//	$passpen1 = $this->input->post('passpen');
+		//	$passpen = md5($this->input->post('passpen'));
+		//	$user = $this->db->get_where('penyewa', ['emailpen'=> $emailpen])->row_array();
+			//var_dump($user);
+		//jika user ada
+		//if ($user) {
+		//jika user aktif
+		//	if ($user['is_active'] == 1) {
+			//cek password
+		//		if ($passpen == $user['passpen']) {
+		//			$data= [
+		//				'emailpen'=> $user['emailpen'],
+		//				'role_id'=> $user['role_id']
+		//				
+		//			];
+		//			$this->session->set_userdata($data);
+		//			redirect('userpenyewa');
+		//		} else {
+		//			jika password tidak sesuai
+		//			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+          //		Email dan password tidak sesuai! </div>');
+			//		redirect('auth/login');
+			//}
+		//	} else {
+		//	$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+         //  	Akun email anda sudah tidak aktif</div>');
+		//		redirect('auth/login');
+	//		}
+//		} else {
+		//jika user tidak ada
+			//$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+           //Email anda belum terdaftar, silahkan daftar terlebih dahulu!</div>');
+		//	redirect('auth/login');
+		//}
+	//}
+		
 	public function registrasi()
 	{
 		$this->form_validation->set_rules(
@@ -100,7 +140,7 @@ class Auth extends CI_Controller
 				'required' => ' Isi alamat anda yang sesuai dan benar!',
 				'max_length' => 'Isi alamat anda yang sesuai dan benar!'
 			]
-		);
+		); 
 		$this->form_validation->set_rules(
 			'emailpen',
 			'email',
@@ -167,7 +207,8 @@ class Auth extends CI_Controller
 			]
 		);
 		if ($this->form_validation->run() == false) {
-			$this->load->view('templates/auth_header');
+			$data['title']= 'Kos kita-Daftar';
+			$this->load->view('templates/auth_header',$data);
 			$this->load->view('auth/vregistrasi');
 			$this->load->view('templates/auth_footer');
 		} else {
@@ -194,6 +235,10 @@ class Auth extends CI_Controller
 			$emailpen= $this->input->post('emailpen');
 			$nikpen =	$this->input->post('nikpen');
 			$role_id= $this->input->post('role_id');
+			$date_created= $this->input->post('date_created');
+			$is_active= $this->input->post('is_active');
+			
+			
 			$data= array(
 				'userpen'=> $userpen ,
 				'passpen' =>$passpen,
@@ -205,13 +250,14 @@ class Auth extends CI_Controller
 				'alamatpen' =>$alamatpen, 
 				'emailpen' =>$emailpen ,
 				'nikpen' =>$nikpen,
-				'role_id' =>2
-			
+				'role_id' =>2,
+				'date_created'=> time(),
+				'is_active' =>1
 			);
 
 			$this->db->insert('penyewa', $data);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-            Congratulations! your account has been created.Please Login!
+            Selamat, Akun anda sudah berhasil dibuat. Silahkan Login terlebih dahulu!
           </div>');
 			redirect('auth/login');
 		}
