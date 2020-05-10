@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal">
+
+	<RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="513dp"
+		android:layout_margin="10dp">
+
+		<TextView
+			android:id="@+id/tvNama_Profil"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:hint="NamaProfil"
+			android:textSize="15sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/tvEmail_Profil"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tvNama_Profil"
+			android:hint="Email Profil"
+			android:textSize="15sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/tvNama"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tvEmail_Profil"
+			android:hint="Nama"
+			android:textSize="15sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/tvAlamat"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tvNama"
+			android:hint="Alamat"
+			android:textSize="15sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/tvNo_Telepon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tvAlamat"
+			android:hint="No Telepon"
+			android:textSize="15sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/tvEmail"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tvNo_Telepon"
+			android:hint="Email"
+			android:textSize="15sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/tvPassword"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tvEmail"
+			android:hint="Password"
+			android:textSize="15sp" />
+
+		<TextView
+			android:id="@+id/tvKonfirmasi_Pw"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tvPassword"
+			android:hint="Konfirmasi Password"
+			android:textSize="15sp" />
+	</RelativeLayout>
+	<View
+		android:background="@color/colorPrimary"
+		android:layout_width="match_parent"
+		android:layout_height="5dp"/>
+</LinearLayout>
