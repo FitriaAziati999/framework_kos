@@ -16,10 +16,14 @@
       $this->load->view('templateshome/vhome',$data);
       $this->load->view('templateshome/vfooterhome');
   }
-
-
-
  
-
+   public function search(){
+    $keyword =$this->input->post('keyword');
+    $data['kos'] = $this->mhome->get_keyword($keyword);
+    $this->load->view('templateshome/vheaderhome');
+    $this->load->view('templateshome/vhome',$data);
+    $this->load->view('templateshome/vfooterhome');
+  }
+      
 }
 ?>
