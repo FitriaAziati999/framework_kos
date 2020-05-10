@@ -7,6 +7,8 @@ package com.kos.KostKita.adapter;
 	import android.view.ViewGroup;
 	import android.widget.TextView;
 
+	import androidx.recyclerview.widget.RecyclerView;
+
 	import com.example.root.kontak.EditActivity;
 	import com.example.root.kontak.Model.Kontak;
 	import com.example.root.kontak.R;
@@ -41,7 +43,7 @@ public class ProfilAdapter extends RecyclerView.Adapter<ProfilAdapter.MyViewHold
 			@Override
 			public void onClick(View view) {
 				Intent mIntent = new Intent(view.getContext(), EditActivity.class);
-				mIntent.putExtra("Id", mKontakList.get(position).getId());
+				mIntent.putExtra("Nama", mKontakList.get(position).getNama());
 				mIntent.putExtra("Nama", mKontakList.get(position).getNama());
 				mIntent.putExtra("Nomor", mKontakList.get(position).getNomor());
 				view.getContext().startActivity(mIntent);
