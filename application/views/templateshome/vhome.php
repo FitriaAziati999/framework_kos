@@ -1,5 +1,4 @@
 
-
   <!-- Page Content -->
   <div class="container">
 
@@ -25,13 +24,10 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+              <img class="d-block img-fluid" src="<?= base_url();?>assets/img/slide.jpg" alt="<?= base_url();?>assets/img/slide.jpg">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+              <img class="d-block img-fluid" src="<?= base_url();?>assets/img/slide2.jpg" alt="<?= base_url();?>assets/img/slide.jpg">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -48,16 +44,17 @@
           <?php foreach ($kos as $p) :?>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="<?php echo $p->fotokamar ?>" alt=""></a>
+              <a href="#"><img class="card-img-top" src="<?= base_url(); ?>assets/img/foto_kos/<?php echo $p->fotokamar ?>" alt=""></a>
               <div class="card-body">
+              <div class="text-center">
                <h4 class="card-title">
                 <a href="#"><?php echo $p->namakos ?></a>
                 </h4>
                 <h5><?php echo $p->harga?></h5>
                 <h5><?php echo $p->khususkos?></h5>
-                <h5><?php echo $p->harga?></h5>
                 <p class="card-text"><?php echo $p->alamatkos?></p>
-                <button type="button" class="btn btn-outline-light">Detail selengkapnya</button>
+                <a href="<?= base_url('detail/detail/') . $p->id_kos ?>" type="button" class="btn btn-outline-primary">Detail selengkapnya</a>
+                </div>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
