@@ -15,9 +15,14 @@
 		<activity android:name=".ListDataKost"></activity>
 		<activity android:name=".DetailDataKos" />
 		<activity android:name=".EditDataKos" />
-		<activity android:name=".DataKos" />
 		<activity android:name=".UpdateProfil" />
-		<activity android:name=".ProfileActivity" />
+		<activity android:name=".ProfileActivity" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
 		<activity android:name=".MainActivity" />
 		<activity android:name=".LoginActivity">
 			<intent-filter>
