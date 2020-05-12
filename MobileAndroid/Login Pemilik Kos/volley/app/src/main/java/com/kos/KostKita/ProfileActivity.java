@@ -31,14 +31,14 @@ import java.util.Map;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
-	TextView Nama, Email, Username, Alamat, NoHP,  namaprofil, EmailProfil, Nik, Idpem;
+	TextView Nama, Email, Username, Alamat, NoHP,  namaprofil, EmailProfil, Nik, Password;
 	Button logout, simpan;
 	String id = "2";
 	RequestQueue requestQueue;
 	CircleImageView foto_profil;
 	ProgressDialog progressDialog;
-	String URL_UPDATE = "http://192.168.43.254/contoh/index.php/profil/update";
-	String HttpUrl = "http://192.168.43.254/contoh/index.php/profil/id";
+	String URL_UPDATE = "http://192.168.100.37/framework_kos/index.php/profil/update";
+	String URL_TAMPIL = "http://192.168.100.37/framework_kos/index.php/profil/id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +53,7 @@ public class ProfileActivity extends AppCompatActivity {
 		NoHP  = (TextView) findViewById(R.id.textNohp);
 		namaprofil =(TextView) findViewById(R.id.profilename);
 		Nik =(TextView)findViewById(R.id.textNIK);
+		Password = (TextView)findViewById(R.id.txtPW);
 		simpan = (Button)findViewById(R.id.simpanprofil);
 
         logout = (Button)findViewById(R.id.button_logout);
@@ -91,7 +92,7 @@ public class ProfileActivity extends AppCompatActivity {
 		progressDialog.show();
 
 
-		StringRequest stringRequest = new StringRequest(Request.Method.POST, HttpUrl,
+		StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_TAMPIL,
 			new Response.Listener<String>() {
 				@Override
 				public void onResponse(String response) {
@@ -108,6 +109,7 @@ public class ProfileActivity extends AppCompatActivity {
 								String strNoHp = object.getString("nopem").trim();
 								String strEmail = object.getString("emailpem").trim();
 								String strUsername = object.getString("userpem").trim();
+								String strPassword = object.getString("passpem").trim();
 								//Picasso.get().load(strFoto).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).into(foto_profil);
 								Email.setText(strEmail);
 								Nama.setText(strNama);
@@ -116,6 +118,7 @@ public class ProfileActivity extends AppCompatActivity {
 								Username.setText(strUsername);
 								namaprofil.setText(strNama);
 								EmailProfil.setText(strEmail);
+								Password.setText(strPassword);
 
 
 							}
@@ -159,6 +162,7 @@ public class ProfileActivity extends AppCompatActivity {
 		final String Email = this.Email.getText().toString().trim();
 		final String Username = this.Username.getText().toString().trim();
 		final String Nik = this.Nik.getText().toString().trim();
+		final String Password = this.Password.getText().toString().trim();
 
 		final ProgressDialog progressDialog = new ProgressDialog(this);
 		progressDialog.setMessage("Update...");
@@ -206,6 +210,7 @@ public class ProfileActivity extends AppCompatActivity {
 				params.put("nopem", NoHP);
 				params.put("userpem", Username);
 				params.put("nikpem", Nik);
+				params.put("passpem", Password);
 				return params;
 			}
 		};

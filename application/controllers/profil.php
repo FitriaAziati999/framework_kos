@@ -20,19 +20,21 @@ class Profil extends REST_Controller{
 
   public function update_put(){
     
-        $response = $this->Mprofil->update_profil(
-          $this->put('id_pemilik'),
-          $this->put('namapem'),
-          $this->put('nopem'),
-          $this->put('alamatpem'),
-          $this->put('nikpem'),
-          $this->put('emailpem')
-          );
-    
-  
-  $this->response($response);
-}
+    $response = $this->Mprofil->update_profil(
+      $this->put('id_pemilik'),
+      $this->put('namapem'),
+      $this->put('emailpem'),
+      $this->put('alamatpem'),
+      $this->put('userpem'),
+      $this->put('nopem'),
+      $this->put('nikpem'),
+      $this->put('passpem')
+      
+      );
 
+
+$this->response($response);
+}
 }
 
 ?>

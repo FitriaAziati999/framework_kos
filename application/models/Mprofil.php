@@ -4,7 +4,8 @@ class Mprofil extends CI_Model
 {
     // mengambil data login tertentu
   public function get_login($id){
-    $this->db->where('id',$id);
+
+    $this->db->where('id_pemilik',$id);
     $login = $this->db->get('pemilik');
     $response['status']=200;
     $response['error']=false;
@@ -13,7 +14,6 @@ class Mprofil extends CI_Model
     return $response;
 
   }
-
   public function empty_response(){
     $response['status']=502;
     $response['error']=true;
@@ -21,9 +21,9 @@ class Mprofil extends CI_Model
     return $response;
   }
 
-  public function update_profil($id,$namapem,$emailpem,$alamatpem,$nopem,$userpem,$nikpem){
+  public function update_profil($id,$namapem,$emailpem,$alamatpem,$nopem,$userpem,$nikpem,$passpem){
 
-    if($id == '' || empty($nama) || empty($email)){
+    if($id == '' || empty($namapem) || empty($emailpem)){
       return $this->empty_response();
     }else{
       $where = array(
@@ -31,16 +31,17 @@ class Mprofil extends CI_Model
       );
 
       $set = array(
-        "namapem"=>$nama,
+        "namapem"=>$namapem,
         "emailpem"=>$emailpem,
+        "alamatpem"=>$alamatpem,
         "userpem"=>$userpem,
         "nopem"=>$nopem,
-        "alamatpem"=>$alamatpem,
-        "nikpem"=>$nikpem
+        "nikpem"=>$nikpem,
+        "passpem"=>$passpem
       );
 
       $this->db->where($where);
-      $update = $this->db->update("kos4",$set);
+      $update = $this->db->update("pemilik",$set);
       if($update){
         $response['status']=200;
         $response['error']=false;
@@ -55,6 +56,5 @@ class Mprofil extends CI_Model
     }
 
   }
-
 }
 
