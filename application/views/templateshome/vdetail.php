@@ -14,6 +14,7 @@ foreach ($detail as $p) :
     $tampung = $p['penghuni'];
     $harga = $p['harga'];
     $stok = $p['stok'];
+    $nopemilik = $p['nopem'];
 ?>
 <!-- Page Content -->
 <div class="container mt-5 mb-5">
@@ -63,7 +64,7 @@ foreach ($detail as $p) :
             </div>
 
             <div class="col-md-3 col-sm-6 mb-4">
-            <a class="btn btn-primary" href="#">Tanya Pemilik</a>
+            <a class="btn btn-primary" href="https://api.WhatsApp.com/send?phone=<?= $nopemilik;?>">Tanya Pemilik</a>
             </div>
 
             <div class="col-md-3 col-sm-6 mb-4">
