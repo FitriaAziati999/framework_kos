@@ -1,29 +1,17 @@
 <!-- Footer -->
-<footer class="py-5 mt-5 bg-primary">
-    <div class="container">
-    <div class="row align-items-stretch mb-5 text-center">
-            <div class="col-md-12 text-center">
+<footer class="py-3 mt-3 bg-primary">
+<div class="container">
+    <div class="row align-items-stretch mb-0 text-center">
+            <div class="col-md-12 ">
                 <div class="form-group">
-                    <h5 class="section-subheading text-white">ALamat : Jember, Jawa Timur</h5>
-                </div>
-                <div class="form-group">
-                    <h5 class="section-subheading text-white">Cp : 085236844218</h5>
-                </div>
-                <div class="form-group">
-                    <h5 class="section-subheading text-white">Email : koskita@gmail.com</h5>
-                </div>
-                <div class="form-group">
-                    <h5 class="section-subheading text-white">Ikuti Akun Social Media Kami</h5>
-                </div>
-                <div class="form-group text-center">
-                    <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                <h6 class="section-subheading text-white">Kos kita "Tempat penyewaan & Pengiklanan Kos" </h6>
+                    <h6 class="section-subheading text-white">Jl. Mastrip 164,Jember, Jawa Timur </h6>
+                    <h6 class="section-subheading text-white">Wa : 085236844218</h6>
+                    <h6 class="section-subheading text-white">Email : koskita@gmail.com</h6>
+                </div></div> 
             </div>
+        </div ><div class="m-12 text-center text-white">Copyright &copy; Your Website 2020 | privacy police
         </div>
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-    </div>
     <!-- /.container -->
   </footer>
 

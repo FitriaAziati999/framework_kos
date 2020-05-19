@@ -25,9 +25,9 @@ class Auth extends CI_Controller
 
 		if ($this->form_validation->run() == false) {
 			$data['title']='Kos kita-Login';
-			$this->load->view('templates/auth_header',$data);
+			$this->load->view('auth/auth_header',$data);
 			$this->load->view('auth/vlogin');
-			$this->load->view('templates/auth_footer');
+			$this->load->view('auth/auth_footer');
 		} else {
 		//$this->_login();
 		$emailpen = $this->input->post('emailpen');
@@ -210,9 +210,9 @@ class Auth extends CI_Controller
 		);
 		if ($this->form_validation->run() == false) {
 			$data['title']= 'Kos kita-Daftar';
-			$this->load->view('templates/auth_header',$data);
+			$this->load->view('auth/auth_header',$data);
 			$this->load->view('auth/vregistrasi');
-			$this->load->view('templates/auth_footer');
+			$this->load->view('auth/auth_footer');
 		} else {
 			//echo 'Data Berhasil Ditambahkan !';
 			//$data = [
