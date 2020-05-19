@@ -42,10 +42,10 @@ class Auth extends CI_Controller
 		redirect('auth/login');
 		}else{
 			$this->session->set_userdata('userpen', $cek->userpen);
-			$this->session->set_userdata('namapen', $cek->namapen);
+			$this->session->set_userdata('namapen', $cek->fotopen);
 			$this->session->set_userdata('role_id', $cek->role_id);
 			switch($cek->role_id){
-			case 1 : 	redirect('admin/dashbord');
+			case 1 : 	redirect('templatesadmin/vadmin');
 							break;
 			case 2 : 	redirect('home/index');
 						//	break;
@@ -57,8 +57,10 @@ class Auth extends CI_Controller
 	
 	public function logout ()
 	{
-		$this->session->session_destroy();
-		//redirect('home/index');
+		$this->session->sess_destroy();
+	//	$this->session->unset_userdata('fotopen');
+	//	$this->session->unset_userdata('role_id');
+		redirect('home/index');
 	}
 		//private function _login()
 		//{
