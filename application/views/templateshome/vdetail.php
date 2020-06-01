@@ -28,11 +28,11 @@ foreach ($detail as $p) :
     <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div class="col-md-8">
-            <img  src="<?= base_url(); ?>assets/img/foto_kos/<?= $foto; ?>"  alt ="" height="630" width="680">
+            <div class="col-md-6">
+            <img  src="<?= base_url(); ?>assets/img/foto_kos/<?= $foto; ?>"  alt ="" height="550" width="500">
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-6">
             <h1 class="my-3"><b><?= $nama;?></b></h1>
             <h4 class="my-3"><i>RP.</i> <?= $harga;?></h4>
             <h5><?= $alamat; ?></h5></br>
@@ -57,21 +57,22 @@ foreach ($detail as $p) :
         
         <div class="row">
 
-            <div class="col-md-2 col-sm-4 mb-3">
+            <div class="col-md-3 col-sm-4 mb-3">
             <a class="btn btn-outline-primary" href="<?= base_url('home/index');?>">Kembali</a>
             </div>
 
-            <div class="col-md-2 col-sm-4 mb-3">
-            <a class="btn btn-outline-primary" href="https://api.WhatsApp.com/send?phone=<?= $nopemilik;?>"><i class="fas fa-phone-alt"></i> Tanya Pemilik</a>
-            </div>
-
-            <div class="col-md-2 col-sm-4 mb-3">
+            <div class="col-md-3 col-sm-4 mb-3">
             <a class="btn btn-outline-primary" href="#"> Sewa Kos</a>
             </div>
 
-            <div class="col-md-2 col-sm-4 mb-3">
+            <div class="col-md-3 col-sm-4 mb-3">
             <a class="btn btn-outline-primary" href="#"><i class="fas fa-heart"></i> Kos favorit </a>
             </div>
+
+            <div class="col-md-3 col-sm-4 mb-3">
+            <a class="btn btn-outline-primary" href="https://api.WhatsApp.com/send?phone=<?= $nopemilik;?>"><i class="fas fa-phone-alt"></i> Tanya Pemilik</a>
+            </div>
+
 
         </div>
         <!-- /.row -->

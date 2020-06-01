@@ -42,7 +42,7 @@
                <h4 class="card-title">
                 <a href="#"><?php echo $p->namakos ?></a>
                 </h4>
-                <h5><?php echo $p->harga?></h5>
+                <h5>Rp. <?php echo $p->harga?></h5>
                 <h5><?php echo $p->khususkos?></h5>
                 <p class="card-text"><?php echo $p->alamatkos?></p>
                 <a href="<?= base_url('detail/detail/') . $p->id_kos ?>" type="button" class="btn btn-outline-primary">Detail selengkapnya</a>

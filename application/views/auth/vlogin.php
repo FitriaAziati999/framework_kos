@@ -28,7 +28,7 @@
                   </div>
                   <div class="form-group">
                     <div class="text-left">
-                      <a class="small" href="forgot-password.html">Lupa Password?</a>
+                      <a class="small" href="<?= base_url('auth/lupapwd'); ?>">Lupa Password?</a>
                     </div>
                   </div>
                   <button type="submit" class="btn btn-primary btn-user btn-block" >
