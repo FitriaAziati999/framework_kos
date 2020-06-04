@@ -14,9 +14,10 @@ foreach ($detail as $p) :
     $tampung = $p['penghuni'];
     $harga = $p['harga'];
     $stok = $p['stok'];
+    $nopemilik = $p['nopem'];
 ?>
 <!-- Page Content -->
-<div class="container mt-5 mb-5">
+<div class="container mt-4 mb-5">
 
   <!-- Portfolio Item Heading -->
   <!-- <h1 class="my-4">Page Heading
@@ -27,52 +28,51 @@ foreach ($detail as $p) :
     <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div class="col-md-8">
-            <img class="img-fluid" src="<?= base_url(); ?>assets/img/foto_kos/<?= $foto; ?>" alt="">
+            <div class="col-md-6">
+            <img  src="<?= base_url(); ?>assets/img/foto_kos/<?= $foto; ?>"  alt ="" height="550" width="500">
             </div>
 
-            <div class="col-md-4">
-            <h3 class="my-3"><?= $nama;?></h3>
-            <h2 class="my-3"><i>RP.</i> <?= $harga;?></h2>
-            <p>Aturan: <?= $peraturan; ?></p>
-            <p>Kawasan: <?= $lingkungan; ?></p>
-            <p>Alamat: <?= $alamat; ?></p>
-            <p>Fasilitas Kos: <?= $fasilitas; ?></p>
-            <p>Khusus Kos<?= $khusus; ?></p>
-            <h3 class="my-3">Fasilitas Kamar</h3>
+            <div class="col-md-6">
+            <h1 class="my-3"><b><?= $nama;?></b></h1>
+            <h4 class="my-3"><i>RP.</i> <?= $harga;?></h4>
+            <h5><?= $alamat; ?></h5></br>
+            <p>Khusus Kos : <?= $khusus; ?></p>
+            <p>Fasilitas Kos : <?= $fasilitas; ?></p>
+            <p>Peraturan kos : <?= $peraturan; ?></p>
+            <p>Lingkungan Sekitar : <?= $lingkungan; ?></p>
+         <hr>
+            <h4 class="my-3">Fasilitas Kamar</h4>
             <ul>
-                <li>Ukuran Kamar: <?= $ukuran;?></li>
-                <li>Daya Tampung: <?= $tampung;?></li>
-                <li>Kamar: <?= $fasilitaskamar;?></li>
-                <li>Stok: <?= $stok;?></li>
-                <!-- <li>Adipiscing Elit</li> -->
-            </ul>
+                <li>Ukuran Kamar : <?= $ukuran;?></li>
+                <li>Daya Tampung : <?= $tampung;?></li>
+                <li> Fasilitas yang ada dikamar : <?= $fasilitaskamar;?></li>
+                <li>Stok : <?= $stok;?></li></ul>
             </div>
-
         </div>
         <!-- /.row -->
     </div>
 
     <div class="card-body">
         <!-- Related Projects Row -->
-
+        
         <div class="row">
 
-            <div class="col-md-3 col-sm-6 mb-4">
-            <a class="btn btn-primary" href="<?= base_url('home/index');?>">Kembali</a>
+            <div class="col-md-3 col-sm-4 mb-3">
+            <a class="btn btn-outline-primary" href="<?= base_url('home/index');?>">Kembali</a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4">
-            <a class="btn btn-primary" href="#">Tanya Pemilik</a>
+            <div class="col-md-3 col-sm-4 mb-3">
+            <a class="btn btn-outline-primary" href="#"> Sewa Kos</a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4">
-            <a class="btn btn-primary" href="#">Sewa Kos</a>
+            <div class="col-md-3 col-sm-4 mb-3">
+            <a class="btn btn-outline-primary" href="#"><i class="fas fa-heart"></i> Kos favorit </a>
             </div>
 
-            <div class="col-md-3 col-sm-6 mb-4">
-            <a class="btn btn-primary" href="#"><i class="fas fa-heart"></i> Whistlist</a>
+            <div class="col-md-3 col-sm-4 mb-3">
+            <a class="btn btn-outline-primary" href="https://api.WhatsApp.com/send?phone=<?= $nopemilik;?>"><i class="fas fa-phone-alt"></i> Tanya Pemilik</a>
             </div>
+
 
         </div>
         <!-- /.row -->

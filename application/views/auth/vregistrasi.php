@@ -7,11 +7,10 @@
 
                 <div class="col-lg">
                     <div class="p-4">
-                        <div class="text-center">
-
-                            <h1 class="h3 text-gray-900 mb-4">Daftar Penyewa</h1>
-
-                        </div>
+                    <div class="text-center">
+                <i class="fas fa-home fa-5x"></i>
+                  <h1 class="h4 text-grey-900 mb-4">Kos Kita</h1>
+                </div>
                         <form class="user" method="post" action="<?= base_url('auth/registrasi'); ?>">
                         <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="namapen" name="namapen" placeholder="Masukkan Nama Lengkap" value="<?= set_value('namapen'); ?>">
@@ -80,7 +79,7 @@
 
                     </div>
                     <div class="text-center">
-                        <a class="small" href="forgot-password.html">Lupa Password?</a>
+                        <a class="small" href="<?= base_url('lupapwd/index'); ?>">Lupa Password?</a>
                     </div>
                     <div class="text-center">
                         <a class="small" href="<?= base_url('auth/login') ?>">Sudah Punya Akun? Login Sekarang!</a>

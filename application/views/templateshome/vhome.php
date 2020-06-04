@@ -3,20 +3,12 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-2">
-
-        <h1 class="my-4">Kategori</h1>
-        <div class="list-group">
-          <a href="#" class="list-group-item">Harga Tertinggi</a>
-          <a href="#" class="list-group-item">Harga Terendah</a>
-        </div>
-
-      </div>
+      
       <!-- /.col-lg-3 -->
 
-      <div class="col-lg-10">
+      <div class="col-lg-14">
 
-        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide my-3 mx-4" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -24,7 +16,7 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block img-fluid" src="<?= base_url();?>assets/img/slide.jpg" alt="<?= base_url();?>assets/img/slide.jpg">
+              <img class="d-block img-fluid" src="<?= base_url();?>assets/img/slide2.jpg" alt="<?= base_url();?>assets/img/slide.jpg">
             </div>
             <div class="carousel-item">
               <img class="d-block img-fluid" src="<?= base_url();?>assets/img/slide2.jpg" alt="<?= base_url();?>assets/img/slide.jpg">
@@ -38,7 +30,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
+        </div><br><br>
 
         <div class="row">
           <?php foreach ($kos as $p) :?>
@@ -50,14 +42,14 @@
                <h4 class="card-title">
                 <a href="#"><?php echo $p->namakos ?></a>
                 </h4>
-                <h5><?php echo $p->harga?></h5>
+                <h5>Rp. <?php echo $p->harga?></h5>
                 <h5><?php echo $p->khususkos?></h5>
                 <p class="card-text"><?php echo $p->alamatkos?></p>
                 <a href="<?= base_url('detail/detail/') . $p->id_kos ?>" type="button" class="btn btn-outline-primary">Detail selengkapnya</a>
                 </div>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <small class="text-yellow">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
               </div>
             </div>
           </div>
