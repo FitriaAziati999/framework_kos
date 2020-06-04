@@ -17,8 +17,6 @@ public class Profil {
 	private String Username;
 	@SerializedName("Password")
 	private String Password;
-	@SerializedName("Konfirmasi_Password")
-	private String Konfirmasi_Password;
 
 	public Profil(){}
 
@@ -31,7 +29,6 @@ public class Profil {
 		this.No_Telepon = No_Telepon;
 		this.Username = Username;
 		this.Password = Password;
-		this.Konfirmasi_Password = Konfirmasi_Password;
 	}
 
 	public String getNama_Profil() { return Nama_Profil; }
@@ -55,7 +52,4 @@ public class Profil {
 	public String getPassword() { return Password; }
 	public void setPassword(String Password) { this.Password = Password; }
 
-
-	public String getKonfirmasi_Password() { return Konfirmasi_Password; }
-	public void setKonfirmasi_Password(String Konfirmasi_Password) { this.Alamat = Alamat; }
 }

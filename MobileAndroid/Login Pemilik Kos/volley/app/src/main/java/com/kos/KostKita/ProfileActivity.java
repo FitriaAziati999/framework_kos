@@ -37,15 +37,15 @@ public class ProfileActivity extends AppCompatActivity {
 	RequestQueue requestQueue;
 	CircleImageView foto_profil;
 	ProgressDialog progressDialog;
-	String URL_UPDATE = "http://192.168.100.37/framework_kos/index.php/profil/update";
-	String URL_TAMPIL = "http://192.168.100.37/framework_kos/index.php/profil/id";
+	String URL_UPDATE = "http://192.168.1.5/contoh/index.php/profil/update";
+	String URL_TAMPIL = "http://192.168.1.5/contoh/index.php/profil/id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-		EmailProfil = (TextView)findViewById(R.id.emailprofil);
+		EmailProfil = (TextView)findViewById(R.id.profilemail);
 		Nama = (TextView) findViewById(R.id.textnama);
 		Email = (TextView) findViewById(R.id.textEmail);
 		Username  = (TextView) findViewById(R.id.textUsername);
@@ -109,6 +109,7 @@ public class ProfileActivity extends AppCompatActivity {
 								String strNoHp = object.getString("nopem").trim();
 								String strEmail = object.getString("emailpem").trim();
 								String strUsername = object.getString("userpem").trim();
+								String strNik = object.getString("nikpem").trim();
 								String strPassword = object.getString("passpem").trim();
 								//Picasso.get().load(strFoto).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).into(foto_profil);
 								Email.setText(strEmail);
@@ -118,6 +119,7 @@ public class ProfileActivity extends AppCompatActivity {
 								Username.setText(strUsername);
 								namaprofil.setText(strNama);
 								EmailProfil.setText(strEmail);
+								Nik.setText(strNik);
 								Password.setText(strPassword);
 
 
@@ -157,7 +159,7 @@ public class ProfileActivity extends AppCompatActivity {
 	private void Update() {
 		final String idpem = this.id;
     	final String Nama = this.Nama.getText().toString().trim();
-		final String Alamat = this.Email.getText().toString().trim();
+		final String Alamat = this.Alamat.getText().toString().trim();
 		final String NoHP = this.NoHP.getText().toString().trim();
 		final String Email = this.Email.getText().toString().trim();
 		final String Username = this.Username.getText().toString().trim();
@@ -205,9 +207,9 @@ public class ProfileActivity extends AppCompatActivity {
 				Map<String, String> params = new HashMap<>();
 				params.put("id_pemilik", idpem);
 				params.put("namapem", Nama);
-				params.put("emailpem", Email);
 				params.put("alamatpem", Alamat);
 				params.put("nopem", NoHP);
+				params.put("emailpem", Email);
 				params.put("userpem", Username);
 				params.put("nikpem", Nik);
 				params.put("passpem", Password);

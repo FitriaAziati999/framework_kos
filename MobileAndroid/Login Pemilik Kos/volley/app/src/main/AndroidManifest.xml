@@ -12,7 +12,7 @@
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme"
 		android:usesCleartextTraffic="true">
-		<activity android:name=".ListDataKost"></activity>
+		<activity android:name=".DataActivity"></activity>
 		<activity android:name=".DetailDataKos" />
 		<activity android:name=".EditDataKos" />
 		<activity android:name=".UpdateProfil" />
