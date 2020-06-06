@@ -8,15 +8,14 @@
   $this->load->helper(array('form','url'));
   }
 
-  public function detail($id) 
+   public function detail($id, $id_kamar) 
     {
         $data['kos']  =$this->mhome->innerjoin();
-        $data['detail'] = $this->mhome->ambil_id($id);
+        $data['detail'] = $this->mhome->ambil_id($id, $id_kamar);
         $this->load->view('templateshome/vheaderhome');
         $this->load->view('templateshome/vdetail',$data);
         $this->load->view('templateshome/vfooterhome');
     }
-  
 
 
 }

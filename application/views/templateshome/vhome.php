@@ -45,7 +45,7 @@
                 <h5>Rp. <?php echo $p->harga?></h5>
                 <h5><?php echo $p->khususkos?></h5>
                 <p class="card-text"><?php echo $p->alamatkos?></p>
-                <a href="<?= base_url('detail/detail/') . $p->id_kos ?>" type="button" class="btn btn-outline-primary">Detail selengkapnya</a>
+                <a href="<?= base_url('detail/detail/') . $p->id_kos ."/". $p->id_kamar ?>" type="button" class="btn btn-outline-primary">Detail selengkapnya</a>
                 </div>
               </div>
               <div class="card-footer">
