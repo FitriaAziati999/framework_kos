@@ -24,7 +24,7 @@
                   </div>
                   <div class="form-group">
                     <input type="password" class="form-control form-control-user" id="passpen" name="passpen" placeholder="Password" value="<?= set_value('passpen'); ?>">
-                    <?= form_error('passpen1', '<small class="text-danger pl-2">', '</small>');  ?>
+                    <?= form_error('passpen', '<small class="text-danger pl-2">', '</small>');  ?>
                   </div>
                   <div class="form-group">
                     <div class="text-left">
