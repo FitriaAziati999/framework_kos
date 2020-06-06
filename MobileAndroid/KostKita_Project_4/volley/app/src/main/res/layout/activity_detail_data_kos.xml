@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".DetailDataKos"
+	android:padding="15dp">
+
+	<RelativeLayout
+		android:id="@+id/rel_id"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<ImageView
+			android:id="@+id/GambarKost"
+			android:layout_width="match_parent"
+			android:layout_height="230dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.489"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<Button
+			android:id="@+id/btn_foto"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Ganti foto"
+			android:layout_below="@id/GambarKost"/>
+
+
+		<EditText
+			android:id="@+id/namakost"
+			android:hint="Nama Kost"
+			android:layout_marginRight="20dp"
+			android:layout_marginLeft="20dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/btn_foto"
+			/>
+		<EditText
+			android:id="@+id/alamatkost"
+			android:hint="Alamat Kost"
+			android:layout_marginRight="20dp"
+			android:layout_marginLeft="20dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/namakost"
+			/>
+		<EditText
+			android:id="@+id/khususkost"
+			android:hint="Khusus Kost"
+			android:layout_marginRight="20dp"
+			android:layout_marginLeft="20dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/alamatkost"
+			/>
+		<EditText
+			android:id="@+id/fasilitaskost"
+			android:hint="Fasilitas Kost"
+			android:layout_marginRight="20dp"
+			android:layout_marginLeft="20dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/khususkost"
+			/>
+		<EditText
+			android:id="@+id/lingkungankost"
+			android:hint="Lingkungan Kost"
+			android:layout_marginRight="20dp"
+			android:layout_marginLeft="20dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/fasilitaskost"
+			/>
+		<EditText
+			android:id="@+id/peraturankost"
+			android:hint="Peraturan Kost"
+			android:layout_marginRight="20dp"
+			android:layout_marginLeft="20dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lingkungankost"
+			/>
+
+		<Button
+			android:id="@+id/btn_hapus"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/peraturankost"
+			android:layout_marginTop="20dp"
+			android:text="Hapus"
+			android:textColor="#ffffff"
+			android:background="@color/colorAccent"/>
+
+	</RelativeLayout>
+
+</RelativeLayout>
