@@ -41,6 +41,7 @@ class Auth extends CI_Controller
        		</div>');
 			redirect('auth/login');
 			}else{
+				$this->session->set_userdata('id_penyewa', $cek->id_penyewa);
 				$this->session->set_userdata('userpen', $cek->userpen);
 				$this->session->set_userdata('namapen', $cek->namapen);
 				$this->session->set_userdata('jkpen', $cek->jkpen);

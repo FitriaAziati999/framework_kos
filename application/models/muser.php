@@ -32,15 +32,23 @@ class Muser extends Ci_Model{
             return FALSE;
         }
     }
+
+    public function tampilprofil($table)
+    {
+    ; 
+        $this->db->get($table);
+    }
     public function gantipwd ($where,$data,$table)
     {
         $this->db->where($where); 
         $this->db->update($table,$data);
     }
-    public function editprofil ($where,$data,$table)
+    
+    public function editprofil ($where,$table,$data)
     {
         $this->db->where($where); 
         $this->db->update($table,$data);
+        
     }
 
 }?>
