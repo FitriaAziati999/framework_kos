@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     String EmailHolder, PasswordHolder;
     ProgressDialog progressDialog;
-    String HttpUrl = "http://192.168.1.7/vollay/user_login.php";
+    String HttpUrl = "http://192.168.1.21/vollay/user_login.php";
     Boolean CheckEditText;
 
     @Override

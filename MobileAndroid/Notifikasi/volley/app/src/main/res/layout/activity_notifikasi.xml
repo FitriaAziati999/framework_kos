@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#3ed45f"
+tools:context=".NotifikasiActivity">
+
+<TextView
+    android:layout_marginRight="32dp"
+    android:layout_marginLeft="32dp"
+    android:text="Anda Memiliki Sebuah Telepon Masuk"
+    android:layout_above="@id/phone_icon"
+    android:textColor="@android:color/white"
+    android:textStyle="bold"
+    android:textSize="32sp"
+    android:layout_marginBottom="32dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+<ImageView
+    android:id="@+id/phone_icon"
+    android:src="@drawable/ic_notif"
+    android:layout_centerInParent="true"
+    android:layout_width="200dp"
+    android:layout_height="200dp" />
+
+<android.support.design.button.MaterialButton
+    android:layout_below="@id/phone_icon"
+    android:layout_marginTop="32dp"
+    android:text="Angkat Telepon"
+    android:id="@+id/btn_angkat_telepon"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
+    app:backgroundTint="@android:color/holo_green_dark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+<android.support.design.button.MaterialButton
+    android:layout_below="@id/btn_angkat_telepon"
+    android:layout_marginTop="16dp"
+    android:text="Abaikan Telepon"
+    android:id="@+id/abaikan_telepon"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
+    app:backgroundTint="@android:color/holo_red_dark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+</RelativeLayout>

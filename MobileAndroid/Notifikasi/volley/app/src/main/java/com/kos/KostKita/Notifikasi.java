@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
@@ -22,7 +21,7 @@ public class Notifikasi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        notif = (Button) findViewById(R.id.button_notif);
+        //notif = (Button) findViewById(R.id.button_notif);
         final String message = "Penyewa Atas Nama Indyra Ayu W akan menyewa pada kos anda, Apakah tersedia kamar?";
         final String title = "Notifikasi";
         notif.setOnClickListener(new View.OnClickListener() {
@@ -36,15 +35,15 @@ public class Notifikasi extends AppCompatActivity {
 
     private void notifTemplate(String title, String message) {
 
-        final Intent intent = new Intent(Notifikasi.this, DisplayNotifikasi.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(Notifikasi.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        //final Intent intent = new Intent(Notifikasi.this, DisplayNotifikasi.class);
+       // PendingIntent pendingIntent = PendingIntent.getActivity(Notifikasi.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationCompat.Builder mBuilder = (NotificationCompat.Builder)
                 new NotificationCompat.Builder(Notifikasi.this)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(title)
                 .setContentText(message)
-                .setContentIntent(pendingIntent)
+                //.setContentIntent(pendingIntent)
                 .setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_SOUND | Notification.FLAG_AUTO_CANCEL);
 

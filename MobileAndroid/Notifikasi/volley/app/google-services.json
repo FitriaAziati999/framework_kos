@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "177934874607",
+    "firebase_url": "https://sending-data-3712c.firebaseio.com",
+    "project_id": "sending-data-3712c",
+    "storage_bucket": "sending-data-3712c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177934874607:android:8629caad8133920221a81a",
+        "android_client_info": {
+          "package_name": "com.kos.KostKita"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177934874607-ofhr2vqbbdg70m488si5fja0is75tabg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kos.KostKita",
+            "certificate_hash": "9657087cb1bdcf3bc3725f53fb6cfb4623995cae"
+          }
+        },
+        {
+          "client_id": "177934874607-7e688sp53n8ifkjk5ls2ck8k58nkt7cf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANk-OZwXRBNRicM7vi96qIUB9JpyfMrpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177934874607-7e688sp53n8ifkjk5ls2ck8k58nkt7cf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
