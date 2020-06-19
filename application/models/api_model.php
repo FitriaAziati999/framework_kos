@@ -1,17 +1,13 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct Script access allowed');
 
-/**
-* 
-*/
-class Api_model extends CI_Controller
+class Api_model extends CI_Model
 
 {
 
-	function getAllNotifikasi()
+	function getAllSewa()
 	{
 		return $this->db->get('sewa')->result_array();
 	}
 }
 
-?>

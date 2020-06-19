@@ -1,12 +1,9 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-/**
-* 
-*/
+
 class Api_notif extends CI_Controller
 {
-	
 	
 	
 		public function __construct()
@@ -17,7 +14,7 @@ class Api_notif extends CI_Controller
 
 		}
 
-		public function notifikasi()
+		public function sewa()
 
 		{
 
@@ -29,27 +26,26 @@ class Api_notif extends CI_Controller
 				$id = $this->input->get('id');
 				if ($id == null) {
 
-					$fetchAll = $this->api->getAllnotifikasi();
-
-					var_dump($fetchAll);
-					die;
+					$fetchAll = $this->api_notif->getAllSewa();
 
 					foreach ($fetchAll as $fetch) {
 						$get = [
 
-							'id' -> $fetch['id_pemilik'],
-							'alamat' -> $fetch['alamatpen'],
-							'nama' -> $fetch['namapen'],
-							'kos' -> $fetch['namakos'],
-							'harga' -> $fetch['harga']
+							'id' => $fetch['id_sewa'],
+							'alamat' => $fetch['id_kos'],
+							//'nama' => $fetch['namapen'],
+							//'kos' => $fetch['namakos'],
+							//'harga' => $fetch['harga']
 
 						];
 
 						array_push($response, $get);
 					}
 				}
+
+				echo header("Content-Type: application/json");
+				echo json_encode($response);
 			}
 		}
 	
 }
-?>

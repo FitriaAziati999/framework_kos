@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2020 at 09:01 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Generation Time: Jun 19, 2020 at 04:59 AM
+-- Server version: 10.1.39-MariaDB
+-- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -143,6 +143,12 @@ CREATE TABLE `sewa` (
   `status` varchar(15) NOT NULL,
   `bukti` blob NOT NULL,
   `id_kos` int(11) NOT NULL,
+  `id_pemilik` int(11) NOT NULL,
+  `namakos` varchar(20) NOT NULL,
+  `harga` int(10) NOT NULL,
+  `namapen` varchar(25) NOT NULL,
+  `alamatpen` varchar(50) NOT NULL,
+  `nopen` varchar(13) NOT NULL,
   `id_penyewa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -150,8 +156,8 @@ CREATE TABLE `sewa` (
 -- Dumping data for table `sewa`
 --
 
-INSERT INTO `sewa` (`id_sewa`, `tgl_bayar`, `tgl_dateline`, `status`, `bukti`, `id_kos`, `id_penyewa`) VALUES
-(1, '2020-04-21 11:27:39', '2020-04-22 11:27:39', 'Lunas', '', 8, 2);
+INSERT INTO `sewa` (`id_sewa`, `tgl_bayar`, `tgl_dateline`, `status`, `bukti`, `id_kos`, `id_pemilik`, `namakos`, `harga`, `namapen`, `alamatpen`, `nopen`, `id_penyewa`) VALUES
+(1, '2020-04-21 11:27:39', '2020-04-22 11:27:39', 'Lunas', '', 8, 2, 'Kost Bidadari', 450000, 'Fitria Azati', 'Blitar', '089677888999', 2);
 
 -- --------------------------------------------------------
 
