@@ -31,11 +31,11 @@ class Api_notif extends CI_Controller
 					foreach ($fetchAll as $fetch) {
 						$get = [
 
-							'id' => $fetch['id_sewa'],
-							'alamat' => $fetch['id_kos'],
-							//'nama' => $fetch['namapen'],
-							//'kos' => $fetch['namakos'],
-							//'harga' => $fetch['harga']
+							'id_pemilik' => $fetch['id_pemilik'],
+							'alamat_penyewa' => $fetch['alamatpen'],
+							'nama_penyewa' => $fetch['namapen'],
+							'nama_kos' => $fetch['namakos'],
+							'harga_sewa' => $fetch['harga']
 
 						];
 
