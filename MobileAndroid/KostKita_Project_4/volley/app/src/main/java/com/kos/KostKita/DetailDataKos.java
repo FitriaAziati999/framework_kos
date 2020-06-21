@@ -56,7 +56,7 @@ public class DetailDataKos extends AppCompatActivity {
 		private Bitmap bitmap;
 		ImageView gambar_kost;
 		SessionManager sessionManager;
-		private static String URL_UPDATE = "http://idtechdev.com/mahasiswa/mhs/update";
+		private static String URL_UPDATE = "http://192.168.100.37/framework_kos/index.php/detaildata";
 		String getId;
 		private Menu action;
 
@@ -79,7 +79,7 @@ public class DetailDataKos extends AppCompatActivity {
 			lingkungan_kos = findViewById(R.id.lingkungankost);
 			peraturan_kos = findViewById(R.id.peraturankost);
 			Button btn_foto = findViewById(R.id.btn_foto);
-			btn_hapus = findViewById(R.id.btn_hapus);
+			btn_hapus = findViewById(R.id.hapus);
 			gambar_kost = findViewById(R.id.GambarKost);
 			nama_kos.setEnabled(false);
 			alamat_kos.setEnabled(false);

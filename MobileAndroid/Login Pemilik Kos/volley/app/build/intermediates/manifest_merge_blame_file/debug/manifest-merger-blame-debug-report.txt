@@ -1,0 +1,101 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.kos.KostKita"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="15"
+8-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:5:2-64
+11-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:5:19-61
+12
+13    <application
+13-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:7:2-34:16
+14        android:allowBackup="true"
+14-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:8:3-29
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:9:3-37
+18        android:label=""
+18-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:10:3-19
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:11:3-48
+20        android:supportsRtl="true"
+20-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:12:3-29
+21        android:testOnly="true"
+22        android:theme="@style/AppTheme"
+22-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:13:3-34
+23        android:usesCleartextTraffic="true" >
+23-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:14:3-38
+24        <activity android:name="com.kos.KostKita.ListDataKost" />
+24-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:15:3-53
+24-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:15:13-41
+25        <activity android:name="com.kos.KostKita.DetailDataKos" />
+25-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:16:3-45
+25-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:16:13-42
+26        <activity android:name="com.kos.KostKita.EditDataKos" />
+26-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:17:3-43
+26-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:17:13-40
+27        <activity android:name="com.kos.KostKita.UpdateProfil" />
+27-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:18:3-44
+27-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:18:13-41
+28        <activity android:name="com.kos.KostKita.ProfileActivity" >
+28-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:19:3-25:14
+28-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:19:13-44
+29            <intent-filter>
+29-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:20:4-24:20
+30                <action android:name="android.intent.action.MAIN" />
+30-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:21:5-57
+30-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:21:13-54
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:23:5-65
+32-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:23:15-62
+33            </intent-filter>
+34        </activity>
+35        <activity android:name="com.kos.KostKita.MainActivity" />
+35-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:26:3-44
+35-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:26:13-41
+36        <activity android:name="com.kos.KostKita.LoginActivity" >
+36-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:27:3-33:14
+36-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:27:13-42
+37            <intent-filter>
+37-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:20:4-24:20
+38                <action android:name="android.intent.action.MAIN" />
+38-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:21:5-57
+38-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:21:13-54
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:23:5-65
+40-->C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:23:15-62
+41            </intent-filter>
+42        </activity>
+43
+44        <provider
+44-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+45            android:name="com.squareup.picasso.PicassoProvider"
+45-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+46            android:authorities="com.kos.KostKita.com.squareup.picasso"
+46-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+47            android:exported="false" />
+47-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+48        <provider
+48-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+49            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+49-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+50            android:authorities="com.kos.KostKita.lifecycle-process"
+50-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+51            android:exported="false"
+51-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+52            android:multiprocess="true" />
+52-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+53    </application>
+54
+55</manifest>

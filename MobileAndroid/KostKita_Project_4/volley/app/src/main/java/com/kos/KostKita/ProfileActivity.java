@@ -37,8 +37,8 @@ public class ProfileActivity extends AppCompatActivity {
 	RequestQueue requestQueue;
 	CircleImageView foto_profil;
 	ProgressDialog progressDialog;
-	String URL_UPDATE = "http://192.168.1.21/contoh/index.php/profil/update";
-	String URL_TAMPIL = "http://192.168.1.21/contoh/index.php/profil/id";
+	String URL_UPDATE = "http://192.168.100.37/contoh/index.php/profil/update";
+	String URL_TAMPIL = "http://192.168.100.37/contoh/index.php/profil/id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

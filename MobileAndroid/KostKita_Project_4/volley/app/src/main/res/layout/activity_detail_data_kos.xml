@@ -85,14 +85,22 @@
 			/>
 
 		<Button
-			android:id="@+id/btn_hapus"
+			android:id="@+id/lanjut"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_below="@id/peraturankost"
 			android:layout_marginTop="20dp"
-			android:text="Hapus"
+			android:text="Lanjut"
 			android:textColor="#ffffff"
 			android:background="@color/colorAccent"/>
+
+		<Button
+			android:id="@+id/hapus"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lanjut"
+			android:layout_marginTop="0dp"
+			android:text="hapus"/>
 
 	</RelativeLayout>
 

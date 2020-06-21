@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailDataKos"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:id="@+id/relative_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/GambarKamar"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_kamar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ganti foto"
+            android:layout_below="@id/GambarKamar"/>
+
+
+        <EditText
+            android:id="@+id/Ukuran_Kamar"
+            android:hint="Ukuran Kamar"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_kamar"
+            />
+        <EditText
+            android:id="@+id/Stok_Kost"
+            android:hint="Stok Kamar"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Ukuran_Kamar"
+            />
+        <EditText
+            android:id="@+id/Harga_Kost"
+            android:hint="Khusus Kost"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Stok_Kost"
+            />
+        <EditText
+            android:id="@+id/Kapasitas_Kamar"
+            android:hint="Kapasitas Kamar"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Harga_Kost"
+            />
+        <EditText
+            android:id="@+id/Fasilitas_Kamar"
+            android:hint="Fasilitas Kamar"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Kapasitas_Kamar"
+            />
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Fasilitas_Kamar"
+            android:layout_marginTop="56dp"
+            android:background="@color/colorAccent"
+            android:text="Simpan"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="0dp"/>
+
+        <Button
+            android:id="@+id/btn_hapus2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_simpan"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:text="Hapus" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

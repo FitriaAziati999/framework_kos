@@ -28,7 +28,7 @@
         android:layout_marginLeft="350dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/button_notif" />
+        android:background="@drawable/button_custom" />
 
 
     <TextView

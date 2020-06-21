@@ -1,0 +1,253 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:2:1-36:12
+MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\263bd8f3656358fd8ddfb51e4929c1a3\navigation-ui-2.2.2\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\5d52d9573d8a8f70a8462cc8f8a42ce9\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6119d746697059b7e1b74aab4d181f56\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3ec6fa8458ddbe732478393a9f9e6c77\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\60a2f88a2b4f62ef7e5b986fe5bd02d2\jetified-circleimageview-2.2.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\f1cb3fec07fc99bcb7ed117f9ae4bdf3\volley-1.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3d4a3c67e39fa8d6d0c0f126c28b81d8\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4fe44ae24daa7cfa2dd483a5d3b65a2f\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\056634285937b2535ff256884ac7cf86\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\a53596bdd308807993a20732db231575\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\790f80b0a374f6f7b6b7fe370fefbffc\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.navigation:navigation-fragment:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\546ee2d10164a9a98090901c9ed1def3\navigation-fragment-2.2.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\ddf6a25e6e3e5e2af441269b48288beb\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\d1ca7cd3905794bed09cb92934ccd6c2\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3a992d8307f21a8f15eb649383ba6a6a\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\664f4ae009672f8d49f9e02edae5cc02\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6a9d1885cb0ca0d94af2e5b22dfc9d65\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\00bc847ce5b9e3ce7b40d465bffbf9e9\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\f01f94691cba516a1b4046f4d9c0acac\fragment-1.2.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4932f7e67b26f042b51fa62f1aa4816d\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\a3c457ded457b98b207b4f227d629399\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e95d1611d40c652e0f77a7c95d74a3f6\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4276267baf989d651cf25177c247ad49\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\5276819c062a92c029464122749254f1\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e288f2dba17ddd14d49879671cb33e26\navigation-runtime-2.2.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\03b6edd881408c681ec3ca24f0393ef7\activity-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\fad0caf490bf2e208af9bea454e64a0b\navigation-common-2.2.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:17:1-32:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\ad7ca255c09497412a7a01f403ddd6c0\lifecycle-service-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\867e3d51a76e05895e9b3a3c44f084b7\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\a548e5d16bfd241ee3b8086d51bf6a56\lifecycle-livedata-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\fe1ff36e0737aaaf9033a5bbe75f69a0\lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e8fcc2415b8b0ba957b309bd060d0497\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4cee4734b336f81c686d6e7b16dafec9\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3819fb4fef2e012192b32762458ba145\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\8ede11fcab21498f1a0c92e4e5245cc2\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\78be57497ca2a8dd090798c529f3e53d\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\fb2fbe77879a57ea0c5dfd6fe59ba874\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:2:1-36:12
+	package
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:3:2-28
+		INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+		INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:2:1-36:12
+		INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:2:1-36:12
+		INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:5:2-64
+	android:name
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:5:19-61
+application
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:7:2-34:16
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\5d52d9573d8a8f70a8462cc8f8a42ce9\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\5d52d9573d8a8f70a8462cc8f8a42ce9\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3ec6fa8458ddbe732478393a9f9e6c77\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3ec6fa8458ddbe732478393a9f9e6c77\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\60a2f88a2b4f62ef7e5b986fe5bd02d2\jetified-circleimageview-2.2.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\60a2f88a2b4f62ef7e5b986fe5bd02d2\jetified-circleimageview-2.2.0\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\f1cb3fec07fc99bcb7ed117f9ae4bdf3\volley-1.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\f1cb3fec07fc99bcb7ed117f9ae4bdf3\volley-1.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\790f80b0a374f6f7b6b7fe370fefbffc\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\790f80b0a374f6f7b6b7fe370fefbffc\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.core:core:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\78be57497ca2a8dd090798c529f3e53d\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\78be57497ca2a8dd090798c529f3e53d\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:12:3-29
+	android:label
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:10:3-19
+	android:roundIcon
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:11:3-48
+	android:icon
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:9:3-37
+	android:allowBackup
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:8:3-29
+	android:theme
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:13:3-34
+	android:usesCleartextTraffic
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:14:3-38
+activity#com.kos.KostKita.ListDataKost
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:15:3-53
+	android:name
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:15:13-41
+activity#com.kos.KostKita.DetailDataKos
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:16:3-45
+	android:name
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:16:13-42
+activity#com.kos.KostKita.EditDataKos
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:17:3-43
+	android:name
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:17:13-40
+activity#com.kos.KostKita.UpdateProfil
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:18:3-44
+	android:name
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:18:13-41
+activity#com.kos.KostKita.ProfileActivity
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:19:3-25:14
+	android:name
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:19:13-44
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:20:4-24:20
+action#android.intent.action.MAIN
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:21:5-57
+	android:name
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:21:13-54
+category#android.intent.category.LAUNCHER
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:23:5-65
+	android:name
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:23:15-62
+activity#com.kos.KostKita.MainActivity
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:26:3-44
+	android:name
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:26:13-41
+activity#com.kos.KostKita.LoginActivity
+ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:27:3-33:14
+	android:name
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml:27:13-42
+uses-sdk
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\263bd8f3656358fd8ddfb51e4929c1a3\navigation-ui-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\263bd8f3656358fd8ddfb51e4929c1a3\navigation-ui-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\5d52d9573d8a8f70a8462cc8f8a42ce9\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\5d52d9573d8a8f70a8462cc8f8a42ce9\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6119d746697059b7e1b74aab4d181f56\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6119d746697059b7e1b74aab4d181f56\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3ec6fa8458ddbe732478393a9f9e6c77\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3ec6fa8458ddbe732478393a9f9e6c77\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\60a2f88a2b4f62ef7e5b986fe5bd02d2\jetified-circleimageview-2.2.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\60a2f88a2b4f62ef7e5b986fe5bd02d2\jetified-circleimageview-2.2.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\f1cb3fec07fc99bcb7ed117f9ae4bdf3\volley-1.1.0\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\f1cb3fec07fc99bcb7ed117f9ae4bdf3\volley-1.1.0\AndroidManifest.xml:7:5-43
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3d4a3c67e39fa8d6d0c0f126c28b81d8\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3d4a3c67e39fa8d6d0c0f126c28b81d8\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4fe44ae24daa7cfa2dd483a5d3b65a2f\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4fe44ae24daa7cfa2dd483a5d3b65a2f\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\056634285937b2535ff256884ac7cf86\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\056634285937b2535ff256884ac7cf86\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\a53596bdd308807993a20732db231575\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\a53596bdd308807993a20732db231575\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\790f80b0a374f6f7b6b7fe370fefbffc\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\790f80b0a374f6f7b6b7fe370fefbffc\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\546ee2d10164a9a98090901c9ed1def3\navigation-fragment-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\546ee2d10164a9a98090901c9ed1def3\navigation-fragment-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\ddf6a25e6e3e5e2af441269b48288beb\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\ddf6a25e6e3e5e2af441269b48288beb\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\d1ca7cd3905794bed09cb92934ccd6c2\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\d1ca7cd3905794bed09cb92934ccd6c2\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3a992d8307f21a8f15eb649383ba6a6a\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3a992d8307f21a8f15eb649383ba6a6a\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\664f4ae009672f8d49f9e02edae5cc02\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\664f4ae009672f8d49f9e02edae5cc02\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6a9d1885cb0ca0d94af2e5b22dfc9d65\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6a9d1885cb0ca0d94af2e5b22dfc9d65\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\00bc847ce5b9e3ce7b40d465bffbf9e9\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\00bc847ce5b9e3ce7b40d465bffbf9e9\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\f01f94691cba516a1b4046f4d9c0acac\fragment-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\f01f94691cba516a1b4046f4d9c0acac\fragment-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4932f7e67b26f042b51fa62f1aa4816d\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4932f7e67b26f042b51fa62f1aa4816d\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\a3c457ded457b98b207b4f227d629399\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\a3c457ded457b98b207b4f227d629399\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e95d1611d40c652e0f77a7c95d74a3f6\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e95d1611d40c652e0f77a7c95d74a3f6\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4276267baf989d651cf25177c247ad49\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4276267baf989d651cf25177c247ad49\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\5276819c062a92c029464122749254f1\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\5276819c062a92c029464122749254f1\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e288f2dba17ddd14d49879671cb33e26\navigation-runtime-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e288f2dba17ddd14d49879671cb33e26\navigation-runtime-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\03b6edd881408c681ec3ca24f0393ef7\activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\03b6edd881408c681ec3ca24f0393ef7\activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\fad0caf490bf2e208af9bea454e64a0b\navigation-common-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.2.2] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\fad0caf490bf2e208af9bea454e64a0b\navigation-common-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\ad7ca255c09497412a7a01f403ddd6c0\lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\ad7ca255c09497412a7a01f403ddd6c0\lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\867e3d51a76e05895e9b3a3c44f084b7\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\867e3d51a76e05895e9b3a3c44f084b7\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\a548e5d16bfd241ee3b8086d51bf6a56\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\a548e5d16bfd241ee3b8086d51bf6a56\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\fe1ff36e0737aaaf9033a5bbe75f69a0\lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\fe1ff36e0737aaaf9033a5bbe75f69a0\lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e8fcc2415b8b0ba957b309bd060d0497\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\e8fcc2415b8b0ba957b309bd060d0497\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4cee4734b336f81c686d6e7b16dafec9\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\4cee4734b336f81c686d6e7b16dafec9\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3819fb4fef2e012192b32762458ba145\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\3819fb4fef2e012192b32762458ba145\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\8ede11fcab21498f1a0c92e4e5245cc2\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\8ede11fcab21498f1a0c92e4e5245cc2\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\78be57497ca2a8dd090798c529f3e53d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\78be57497ca2a8dd090798c529f3e53d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\fb2fbe77879a57ea0c5dfd6fe59ba874\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\fb2fbe77879a57ea0c5dfd6fe59ba874\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+		INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+		ADDED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+		INJECTED from C:\xampp\htdocs\framework_kos\MobileAndroid\Login Pemilik Kos\volley\app\src\main\AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\6d72ac35cf45cf1023ea950d2bd2efbd\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ihza Oktavira\.gradle\caches\transforms-2\files-2.1\58629c19fa6c616abd60edc0d2bb07b8\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79

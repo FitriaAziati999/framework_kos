@@ -14,9 +14,9 @@
 		android:usesCleartextTraffic="true">
 		<activity android:name=".DataActivity"></activity>
 		<activity android:name=".DetailDataKos" />
-		<activity android:name=".ProfileActivity" />
+		<activity android:name=".LoginActivity" />
 		<activity android:name=".RegisterActivity" />
-		<activity android:name=".LoginActivity" >
+		<activity android:name=".ProfileActivity" >
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
