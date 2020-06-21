@@ -33,6 +33,13 @@
         </div><br><br>
 
         <div class="row">
+        <?php
+        if($this->session->flashdata('kosong')) : ?>
+         <div class="alert alert-success alert-dismissible">
+         <h2><?php echo $this->session->flashdata('kosong'); ?></h2>
+        </div>
+        <?php endif; ?>
+        
           <?php foreach ($kos as $p) :?>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">

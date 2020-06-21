@@ -17,12 +17,23 @@
       $this->load->view('templateshome/vfooterhome');
   }
  
-   public function search(){
+  public function search(){
+
     $keyword =$this->input->post('keyword');
     $data['kos'] = $this->mhome->get_keyword($keyword);
-    $this->load->view('templateshome/vheaderhome');
-    $this->load->view('templateshome/vhome',$data);
-    $this->load->view('templateshome/vfooterhome');
+    //var_dump($data);
+    //die;
+    if(!$data['kos']){
+      $this->session->set_flashdata('kosong', 'Pencarian Tidak Ditemukan');
+      $this->load->view('templateshome/vheaderhome');
+      $this->load->view('templateshome/vhome',$data);
+      $this->load->view('templateshome/vfooterhome');
+    } else{
+      $this->load->view('templateshome/vheaderhome');
+      $this->load->view('templateshome/vhome',$data);
+      $this->load->view('templateshome/vfooterhome');
+    }
+    
   }
       
 }
