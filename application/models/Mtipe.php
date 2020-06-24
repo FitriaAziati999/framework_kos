@@ -1,12 +1,12 @@
 <?php
 
-class Mdata extends CI_Model 
+class Mtipe extends CI_Model 
 {
     // mengambil data login tertentu
   public function get_login($id){
 
-    $this->db->where('id_pem',$id);
-    $login = $this->db->get('datakos');
+    $this->db->where('id_kos',$id);
+    $login = $this->db->get('tipekamar');
     $response['status']=200;
     $response['error']=false;
     $response['data']=$login->result();
@@ -21,9 +21,9 @@ class Mdata extends CI_Model
     return $response;
   }
 
-  public function update_datakos($id,$namakos,$alamatkos,$khususkos,$fasilitaskos,$lingkungankos,$peraturankos){
+  public function update_datakos($id,$ukuran,$stok,$harga,$penghuni,$fasilitaskamar,$fotokamar){
 
-    if($id == '' || empty($namakos) || empty($alamatkos)){
+    if($id == '' || empty($ukuran) || empty($stok)){
       return $this->empty_response();
     }else{
       $where = array(
@@ -31,25 +31,25 @@ class Mdata extends CI_Model
       );
 
       $set = array(
-        "namakos"=>$namakos,
-        "alamatkos"=>$alamatkos,
-        "khususkos"=>$khususkos,
-        "fasilitaskos"=>$fasilitaskos,
-        "lingkungankos"=>$lingkungankos,
-        "peraturankos"=>$peraturankos,
+        "ukuran"=>$ukuran,
+        "stok"=>$stok,
+        "harga"=>$harga,
+        "penghuni"=>$penghuni,
+        "fasilitaskamar"=>$fasilitaskamar,
+        "fotokamar"=>$fotokamar,
       );
 
       $this->db->where($where);
-      $update = $this->db->update("datakos",$set);
+      $update = $this->db->update("tipekamar",$set);
       if($update){
         $response['status']=200;
         $response['error']=false;
-        $response['message']='Data kos diubah.';
+        $response['message']='Data kamar diubah.';
         return $response;
       }else{
         $response['status']=502;
         $response['error']=true;
-        $response['message']='Data kos gagal diubah.';
+        $response['message']='Data kamar gagal diubah.';
         return $response;
       }
     }

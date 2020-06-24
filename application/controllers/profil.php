@@ -25,11 +25,10 @@ class Profil extends REST_Controller{
       $this->put('namapem'),
       $this->put('emailpem'),
       $this->put('alamatpem'),
-      $this->put('userpem'),
       $this->put('nopem'),
+      $this->put('userpem'),
       $this->put('nikpem'),
-      $this->put('passpem')
-      
+      $this->put('passpem'),
       );
 
 

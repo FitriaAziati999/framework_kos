@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailDataKos"
+    tools:context=".TipeKamar"
     android:padding="15dp">
 
     <RelativeLayout
@@ -49,7 +49,7 @@
             />
         <EditText
             android:id="@+id/Harga_Kost"
-            android:hint="Khusus Kost"
+            android:hint="Harga Kost"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
