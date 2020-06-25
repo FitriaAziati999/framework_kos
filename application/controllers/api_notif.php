@@ -13,6 +13,7 @@ class Api_notif extends CI_Controller
 			$this->load->model('api_model', 'api_notif');
 
 		}
+		
 
 		public function sewa()
 
@@ -32,8 +33,8 @@ class Api_notif extends CI_Controller
 						$get = [
 
 							'id_pemilik' => $fetch['id_pemilik'],
-							'alamat_penyewa' => $fetch['alamatpen'],
 							'nama_penyewa' => $fetch['namapen'],
+							'alamat_penyewa' => $fetch['alamatpen'],
 							'nama_kos' => $fetch['namakos'],
 							'harga_sewa' => $fetch['harga']
 
