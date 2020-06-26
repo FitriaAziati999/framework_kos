@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     String EmailHolder, PasswordHolder;
     ProgressDialog progressDialog;
-    String HttpUrl = "http://192.168.100.37/framework_kos/index.php/user_login";
+    String HttpUrl = "http://192.168.1.21/framework_kos/api_logn/sign_In";
     Boolean CheckEditText;
 
     @Override
@@ -75,13 +75,13 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(String ServerResponse) {
                         progressDialog.dismiss();
 
-                        if (ServerResponse.equalsIgnoreCase("Data Matched")) {
+                        if (ServerResponse.equalsIgnoreCase("Login Berhasil")) {
 
                             Toast.makeText(LoginActivity.this, "Selamat Datang di Kost Kita", Toast.LENGTH_LONG).show();
 
                             finish();
 
-                            Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, Beranda.class);
                             intent.putExtra("emailpemTAG", EmailHolder);
                             startActivity(intent);
                         } else {

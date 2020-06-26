@@ -11,21 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:name=".AppController.AppController"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Beranda"></activity>
-        <activity android:name=".DataActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".ProfileActivity"/>
+
         <activity android:name=".DetailDataKos"/>
-        <activity android:name=".TipeKamar" >
-            <intent-filter>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".TipeKamar"/>
+        <activity android:name=".Notif"/>
+        <activity android:name=".Beranda"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".LoginActivity">
+
+
+
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+
     </application>
 
 </manifest>

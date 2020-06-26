@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Beranda extends AppCompatActivity {
 
-    Button Mprofil, Mdata, Mtipe, Mlogout;
+    Button Mprofil, Mdata, Mtipe, Mnotif, Mlogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class Beranda extends AppCompatActivity {
         Mprofil = (Button)findViewById(R.id.tmblProfil);
         Mdata = (Button)findViewById(R.id.tmblDataKos);
         Mtipe = (Button)findViewById(R.id.tmblTipeKamar);
+        Mnotif = (Button)findViewById(R.id.tmblNotifikasi);
         Mlogout = (Button)findViewById(R.id.tmblLogout);
 
         Mprofil.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +36,15 @@ public class Beranda extends AppCompatActivity {
             public void onClick(View v) {
                 Intent data = new Intent(getApplicationContext(),DetailDataKos.class);
                 startActivity(data);
+                finish();
+            }
+        });
+
+        Mnotif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent notif = new Intent(getApplicationContext(),Notif.class);
+                startActivity(notif);
                 finish();
             }
         });

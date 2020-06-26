@@ -38,8 +38,8 @@ public class TipeKamar extends AppCompatActivity {
     RequestQueue requestQueue;
     ImageView Fotokos;
     ProgressDialog progressDialog;
-    String URL_UPDATE = "http://192.168.100.35/framework_kos/index.php/tipe/update";
-    String URL_TAMPIL = "http://192.168.100.35/framework_kos/index.php/tipe/id";
+    String URL_UPDATE = "http://192.168.1.21/framework_kos/index.php/tipe/update";
+    String URL_TAMPIL = "http://192.168.1.21/framework_kos/index.php/tipe/id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

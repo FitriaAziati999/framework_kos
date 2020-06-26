@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="185dp"
+    android:layout_marginTop="5dp"
+    android:padding="8dp"
+    android:background="#fff">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/notify"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:id="@+id/cv"
+        android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/notif_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Notifikasi"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/notif_idpem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Id Pemilik"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="200dp"
+            android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/notif_namapen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:textColor="#000000"
+        android:text="Nama Penyewa"
+        android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/notif_alamatkos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Alamat Kos"
+            android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/notif_namakos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Nama Kos"
+        android:textSize="16sp" />
+
+
+
+        <TextView
+            android:id="@+id/notif_hargasewa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Harga Sewa"
+            android:textSize="16sp" />
+
+
+
+</LinearLayout>
+
+</LinearLayout>
