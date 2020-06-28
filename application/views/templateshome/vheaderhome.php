@@ -41,20 +41,30 @@
           <a class="navbar-brand"></a> <form class ="form-inline" action= <?= base_url('home/search')?> method= "post" > <input class="form-control mr-sm-2" name="keyword" type="search" placeholder="Search" aria-label="Search"> <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button> </form>
         </li>
     <!-- Example filtering dropdowns -->
-    <li class="nav-item"> 
-    <div class="btn-group" color="white">
-    <button type="button"  class="btn text-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-  <i class="fas fa-filter"></i>
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Harga Tertinggi</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Harga Terjangkau</a>
-        </div>
-        </div>
-        
-      </li>
-            <li class="nav-item">
+     <li class="nav-item"> 
+          <form action="<?php echo base_url('home/search_terendah'); ?>" method="POST">
+            <div class="btn-group" color="white">
+             <button type="button"  class="btn text-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              <i class="fas fa-filter"></i>
+            </button>
+            <div class="dropdown-menu">
+              <input type="hidden" name="min" value="0">
+              <input type="hidden" name="max" value="350000">
+              <button type="submit" class="dropdown-item">Harga Terjangkau</button>
+
+            </form>
+
+            <form action="<?php echo base_url('home/search_tertinggi'); ?>" method="POST">
+
+             <div class="dropdown-divider"></div>
+             <input type="hidden" name="min" value="360000">
+             <input type="hidden" name="max" value="550000">
+             <button type="submit" class="dropdown-item">Harga Termahal</button>
+           </div>
+         </div>
+       </form>
+     </li>
+           <li class="nav-item">
               <a class="nav-link text-white" href="<?php echo base_url('auth/registrasi')?>"> Daftar</a>
            </li> 
           

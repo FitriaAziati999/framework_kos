@@ -35,6 +35,30 @@
     }
     
   }
-      
+     
+public function search_terendah(){
+  $keyword1 =$this->input->post('min'); // Menagkap Input Harga Terendah
+  $keyword2 =$this->input->post('max'); // Menagkap Input Harga Tertinggi
+
+
+  $data['kos'] = $this->mhome->get_harga_terendah($keyword1,$keyword2);
+
+  $this->load->view('templateshome/vheaderhome');
+  $this->load->view('templateshome/vhome',$data);
+  $this->load->view('templateshome/vfooterhome');
+}
+
+public function search_tertinggi(){
+  $keyword1 =$this->input->post('min'); // Menagkap Input Harga Terendah
+  $keyword2 =$this->input->post('max'); // Menagkap Input Harga Tertinggi
+
+
+  $data['kos'] = $this->mhome->get_harga_tertinggi($keyword1,$keyword2);
+
+  $this->load->view('templateshome/vheaderhome');
+  $this->load->view('templateshome/vhome',$data);
+  $this->load->view('templateshome/vfooterhome');
+}
+ 
 }
 ?>
