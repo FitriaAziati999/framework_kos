@@ -17,7 +17,7 @@
                   <h1 class="h4 text-grey-900 mb-4">Kos Kita</h1>
                   <h2 class="h6 text-grey-900 mb-4">Ganti Password baru</h2>
                 </div>
-                <?= $this->session->flashdata('message');?>
+
                 <form class="user" method="post" action="<?php echo base_url ('auth/resetpwd'); ?> ">
                   <div class="form-group">
                   <input type="password" class="form-control form-control-user" id="passpen" name="passpen" placeholder="Masukkan Password baru anda " value="<?= set_value('passpen'); ?>">

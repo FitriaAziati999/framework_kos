@@ -35,7 +35,7 @@ class Muser extends Ci_Model{
 
     public function tampilprofil($table)
     {
-    ; 
+    
         $this->db->get($table);
     }
     public function gantipwd ($where,$data,$table)
@@ -50,5 +50,12 @@ class Muser extends Ci_Model{
         $this->db->update($table,$data);
         
     }
+
+    public function riwayatkos($data,$table)
+    {
+       
+        $this->db->get('sewa');
+    }
+
 
 }?>

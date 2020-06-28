@@ -204,7 +204,7 @@ class User extends CI_Controller
                   'emailpen' =>$emailpen ,
                   'nikpen' =>$nikpen,
                   //'role_id' =>2,
-                  //'date_created'=> time(),
+                  'last_update'=> date('Y-m-d'),
                   //'is_active' =>1
                );
 
@@ -274,6 +274,17 @@ class User extends CI_Controller
             redirect('user/gantipwd');
          }    
 
+      }
+
+      public function riwayatkos()
+      {     $data['penyewa']=$this->db->get_where('penyewa',['id_penyewa'=> $this->session->userdata('id_penyewa')])->row_array();
+            $tampil=$this->muser->riwayatkos($data,'sewa');
+         //$query['sewa']=$this->db->query("SELECT * FROM sewa where id_penyewa='id_penyewa'")->result();
+            $data['title']='Kos kita- Riwayat Kos';
+            $this->load->view('templatesuser/vheaderuser',$data);
+            $this->load->view('templatesuser/vsidebaruser');
+            $this->load->view('templatesuser/vriwayatkos',$tampil);
+            $this->load->view('templatesuser/vfooteruser');
       }
 }
 ?>

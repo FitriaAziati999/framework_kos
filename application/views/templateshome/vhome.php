@@ -31,15 +31,8 @@
             <span class="sr-only">Next</span>
           </a>
         </div><br><br>
-
+        <?= $this->session->flashdata('message');?>
         <div class="row">
-        <?php
-        if($this->session->flashdata('kosong')) : ?>
-         <div class="alert alert-success alert-dismissible">
-         <h2><?php echo $this->session->flashdata('kosong'); ?></h2>
-        </div>
-        <?php endif; ?>
-        
           <?php foreach ($kos as $p) :?>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
@@ -50,10 +43,20 @@
                 <a href="#"><?php echo $p->namakos ?></a>
                 </h4>
                 <h5>Rp. <?php echo $p->harga?></h5>
+                
                 <h5><?php echo $p->khususkos?></h5>
                 <p class="card-text"><?php echo $p->alamatkos?></p>
-                <a href="<?= base_url('detail/detail/') . $p->id_kos ."/". $p->id_kamar ?>" type="button" class="btn btn-outline-primary">Detail selengkapnya</a>
+                <?php 
+                  if($p->status == "Tersedia"){
+                    echo '<span class="btn btn-success">Tersedia</span>';
+                  }else{
+                    echo '<span class="btn btn-danger">Tidak Tersedia</span>';
+                  }
+                ?>
+                <a href="<?= base_url('home/detail/') . $p->id_kos ."/". $p->id_kamar ?>" type="button" class="btn btn-outline-primary">Detail selengkapnya</a>
                 </div>
+
+               
               </div>
               <div class="card-footer">
                 <small class="text-yellow">&#9733; &#9733; &#9733; &#9733; &#9734;</small>

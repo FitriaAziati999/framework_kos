@@ -13,9 +13,10 @@ foreach ($detail as $p) :
     $ukuran = $p['ukuran'];
     $tampung = $p['penghuni'];
     $harga = $p['harga'];
-    $stok = $p['stok'];
+    $status = $p['status'];
     $nopemilik = $p['nopem'];
 ?>
+
 <!-- Page Content -->
 <div class="container mt-4 mb-5">
 
@@ -26,6 +27,7 @@ foreach ($detail as $p) :
   <div class="card">
     <div class="card-body">
     <!-- Portfolio Item Row -->
+    <?= $this->session->flashdata('message');?>
         <div class="row">
 
             <div class="col-md-6">
@@ -33,7 +35,7 @@ foreach ($detail as $p) :
             </div>
 
             <div class="col-md-6">
-            <h1 class="my-3"><b><?= $nama;?></b></h1>
+            <h1 class="my-3"><b><?= $nama?></b></h1>
             <h4 class="my-3"><i>RP.</i> <?= $harga;?></h4>
             <h5><?= $alamat; ?></h5></br>
             <p>Khusus Kos : <?= $khusus; ?></p>
@@ -46,12 +48,12 @@ foreach ($detail as $p) :
                 <li>Ukuran Kamar : <?= $ukuran;?></li>
                 <li>Daya Tampung : <?= $tampung;?></li>
                 <li> Fasilitas yang ada dikamar : <?= $fasilitaskamar;?></li>
-                <li>Stok : <?= $stok;?></li></ul>
+                <li>Stok : <?= $status;?></li></ul>
             </div>
         </div>
-        <!-- /.row -->
     </div>
 
+        <!-- /.row -->
     <div class="card-body">
         <!-- Related Projects Row -->
         
@@ -62,17 +64,22 @@ foreach ($detail as $p) :
             </div>
 
             <div class="col-md-3 col-sm-4 mb-3">
-            <a class="btn btn-outline-primary" href="#"> Sewa Kos</a>
-            </div>
-
-            <div class="col-md-3 col-sm-4 mb-3">
-            <a class="btn btn-outline-primary" href="#"><i class="fas fa-heart"></i> Kos favorit </a>
+            
+            <?php if($status == "Tersedia"){
+              echo anchor('sewa/tampil_sewa/'. $id ."/". $id_k,'<span class="btn btn-outline-primary"> Sewa Kos </span>');
+            }else{ 
+              echo '<span class="btn btn-outline-primary">Tidak Tersedia</span>';
+            }?>
+         
             </div>
 
             <div class="col-md-3 col-sm-4 mb-3">
             <a class="btn btn-outline-primary" href="https://api.WhatsApp.com/send?phone=<?= $nopemilik;?>"><i class="fas fa-phone-alt"></i> Tanya Pemilik</a>
             </div>
 
+            <div class="col-md-3 col-sm-4 mb-3">
+            <a class="btn btn-outline-primary" href="<?= base_url('home/favoritkos/'. $id ."/". $id_k);?>"><i class="fas fa-heart"></i> Kos favorit </a>
+            </div>
 
         </div>
         <!-- /.row -->

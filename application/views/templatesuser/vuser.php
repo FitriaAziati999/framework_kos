@@ -20,7 +20,7 @@
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-                <span class="mr-4 d-none d-lg-inline text-black-100 ">Welcome <?php echo $penyewa['userpen'];?></span>
+                <span class="mr-4 d-none d-lg-inline text-black-100 ">Welcome <?php echo $penyewa['userpen'];?> on  <?php echo $penyewa['date_created'];?> </span>
                 <img class="img-profile rounded-circle" width="35" height="35" src="<?= base_url('assets/img/profil/').$penyewa['fotopen'];?>">
               </a>
             </li>
@@ -52,7 +52,7 @@
         <p class="card-text"><?php echo $penyewa['alamatpen'];?></p>
         <p class="card-text"><?php echo $penyewa['pekerjaanpen'];?></p>
         <p class="card-text">NIK : <?php echo $penyewa['nikpen'];?></p>
-        <p class="card-text"></small></p>
+        <p class="card-text">Terakhir di update: <?php echo $penyewa['last_update'];?></small></p>
         <div>
      
             <a class="btn btn-primary" href="<?php echo base_url('user/editprofil')?>"><i class="fas fa-edit"></i> Edit </a>

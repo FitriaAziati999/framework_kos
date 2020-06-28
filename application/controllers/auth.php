@@ -208,7 +208,7 @@ class Auth extends CI_Controller
 				'emailpen' =>$emailpen ,
 				'nikpen' =>$nikpen,
 				'role_id' =>2,
-				'date_created'=> time(),
+				'date_created'=>date('Y-m-d'),
 				'is_active' =>1
 			);
 
