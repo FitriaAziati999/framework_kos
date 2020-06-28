@@ -24,6 +24,8 @@ class Api_notif extends CI_Controller
 			$response = [];
 
 			if ($method == "GET") {
+
+				
 				$id = $this->input->get('id');
 				if ($id == null) {
 
