@@ -32,19 +32,18 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
 	TextView Nama, Email, Username, Alamat, NoHP,  namaprofil, EmailProfil, Nik, Password;
-	Button logout, simpan;
+	Button logout, simpan, beranda;
 	String id = "2";
 	RequestQueue requestQueue;
 	CircleImageView foto_profil;
 	ProgressDialog progressDialog;
-	String URL_UPDATE = "http://192.168.100.35/contoh/index.php/profil/update";
-	String URL_TAMPIL = "http://192.168.100.35/contoh/index.php/profil/id";
+	String URL_UPDATE = "http://192.168.100.37/contoh/index.php/profil/update";
+	String URL_TAMPIL = "http://192.168.100.37/contoh/index.php/profil/id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
 		EmailProfil = (TextView)findViewById(R.id.profilemail);
 		Nama = (TextView) findViewById(R.id.textnama);
 		Email = (TextView) findViewById(R.id.textEmail);
@@ -55,7 +54,7 @@ public class ProfileActivity extends AppCompatActivity {
 		Nik =(TextView)findViewById(R.id.textNIK);
 		Password = (TextView)findViewById(R.id.txtPW);
 		simpan = (Button)findViewById(R.id.simpanprofil);
-
+		beranda = (Button)findViewById(R.id.beranda);
         logout = (Button)findViewById(R.id.button_logout);
         // Receiving value into activity using intent.
         String TempHolder = getIntent().getStringExtra("emailpemTAG");
@@ -63,7 +62,14 @@ public class ProfileActivity extends AppCompatActivity {
         EmailProfil.setText(EmailProfil.getText() + TempHolder);
         getUserDetail();
 
-
+		beranda.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent beranda = new Intent(getApplicationContext(),Beranda.class);
+				startActivity(beranda);
+				finish();
+			}
+		});
         // Adding click listener to logout button.
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

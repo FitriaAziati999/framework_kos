@@ -2,13 +2,18 @@ package com.kos.KostKita;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -34,113 +39,68 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class DataActivity<SessionManager> extends AppCompatActivity {
+import okhttp3.internal.Util;
 
-	private static final String TAG = DataActivity.class.getSimpleName();
-	private List<Data> listData = new ArrayList<>();
-	private RecyclerView recyclerView;
-	SessionManager sessionManager;
+public class DataActivity extends RecyclerView.Adapter<DataActivity.HolderData> {
+	private List<ModalData> mItems;
+	private Context context;
+	private OnHistoryClickListener listener;
 
-	@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+	public interface OnHistoryClickListener{
+		public void onClick(int position);
+	}
+
+	public void setListener(OnHistoryClickListener listener) {
+		this.listener = listener;
+	}
+
+	public DataActivity(Context context, List<ModalData> mItems)
+	{
+		this.context = context;
+		this.mItems = mItems;
+	}
+	@NonNull
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_data_kos);
-		Objects.requireNonNull(getSupportActionBar()).setTitle("Data Kos");
-		//sessionManager = new SessionManager(this);
-		//sessionManager.checkLogin();
-		recyclerView = findViewById(R.id.recycleview_id);
-		getListData();
-
-		FloatingActionButton addAction = findViewById(R.id.btn_add);
-		addAction.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(DataActivity.this, TambahDataKos.class);
-                /*intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);*/
-				startActivity(intent);
-			}
-		});
+	public HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+		View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_data_kos, parent, false);
+		HolderData holderData = new DataActivity.HolderData(layout, listener);
+		return holderData;
 	}
 
-	private void getListData() {
-		final ProgressDialog progressDialog = new ProgressDialog(this);
-		progressDialog.setMessage("Loading...");
-		progressDialog.show();
+	@Override
+	public void onBindViewHolder(@NonNull final HolderData holder, int position) {
+		ModalData me = mItems.get(position);
+		holder.NamaKost.setText(me.getNamaKost());
+		holder.AlamatKost.setText(me.getAlamatKost());
+		holder.JenisKost.setText(me.getJeniskost());
+		holder.Stok.setText(me.getStok());
+	}
 
-		String URL_MHS_READ = "http://idtechdev.com/mahasiswa/mhs";
-		StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_MHS_READ,
-			new Response.Listener<String>() {
+	@Override
+	public int getItemCount() {
+		return mItems.size();
+	}
+
+	public static class HolderData extends RecyclerView.ViewHolder {
+		TextView NamaKost,AlamatKost, JenisKost, Stok;
+		public HolderData(@NonNull View itemView, final OnHistoryClickListener listener) {
+			super(itemView);
+			NamaKost = itemView.findViewById(R.id.NamaKost);
+			AlamatKost = itemView.findViewById(R.id.AlamatKost);
+			JenisKost = itemView.findViewById(R.id.JenisKost);
+			Stok = itemView.findViewById(R.id.stokKost);
+
+			itemView.setOnClickListener(new View.OnClickListener() {
 				@Override
-				public void onResponse(String response) {
-					progressDialog.dismiss();
-					Log.i(TAG,response);
-					try{
-						JSONObject jsonObject = new JSONObject(response);
-						String status = jsonObject.getString("status");
-						String error = jsonObject.getString("error");
-						if (status.equals("200") && error.equals("false")){
-							JSONArray jsonArray = jsonObject.getJSONArray("Data");
-							for (int i=0; i < jsonArray.length(); i++){
-								JSONObject object = jsonArray.getJSONObject(i);
-								String strId_kos = object.getString("id_kos").trim();
-								String strId_pemilik = object.getString("id_pemilik").trim();
-								String strNama_kos = object.getString("nama_kos").trim();
-								String strAlamat_kos = object.getString("alamat_kos").trim();
-								String strKhusus_kos = object.getString("khusus_kos").trim();
-								String strFasilitas_kos = object.getString("fasilitas_kos").trim();
-								String strLingkungan_kos = object.getString("Lingkungan_kos").trim();
-								String strPeraturan_kos = object.getString("Peraturan_kos").trim();
-								Data data = new Data();
-								data.setId_kos(strId_kos);
-								data.setId_pemilik(strId_pemilik);
-								data.setNama_kos(strNama_kos);
-								data.setAlamat_kos(strAlamat_kos);
-								data.setKhusus_kos(strKhusus_kos);
-								data.setFasilitas_kos(strFasilitas_kos);
-								data.setLingkungan_kos(strLingkungan_kos);
-								data.setPeraturan_kos(strPeraturan_kos);
-								listData.add(data);
-								//Toast.makeText(MhsActivity.this, strNim+"\n"+strNama+"\n"+strFoto+"\n\n", Toast.LENGTH_SHORT).show();
-							}
-							//Toast.makeText(MhsActivity.this,"Size of Liste "+String.valueOf(listMhs.size()),Toast.LENGTH_SHORT).show();
-							//Toast.makeText(MhsActivity.this,listMhs.get(1).toString(),Toast.LENGTH_SHORT).show();
-							setuprecyclerview(listData);
-						} else {
-							Toast.makeText(DataActivity.this, "Tidak dapat memuat data", Toast.LENGTH_SHORT).show();
+				public void onClick(View v) {
+					if(listener != null){
+						int position = getAdapterPosition();
+						if (position != RecyclerView.NO_POSITION){
+							listener.onClick(position);
 						}
-						//setuprecyclerview(listMhs);
-					} catch (JSONException e){
-						e.printStackTrace();
-						Toast.makeText(DataActivity.this, "Error "+e.toString(), Toast.LENGTH_SHORT).show();
 					}
-
 				}
-			},
-			new Response.ErrorListener() {
-				@Override
-				public void onErrorResponse(VolleyError error) {
-					progressDialog.dismiss();
-					Toast.makeText(DataActivity.this, "Error "+error.toString(), Toast.LENGTH_SHORT).show();
-				}
-			})
-		{
-			@Override
-			protected Map<String, String> getParams() {
-				Map<String, String> params = new HashMap<>();
-				params.put("Content-Type","application/x-www-form-urlencoded");
-				return params;
-			}
-		};
-
-		RequestQueue requestQueue = Volley.newRequestQueue(this);
-		requestQueue.add(stringRequest);
-	}
-
-	public void setuprecyclerview(List<Data> listData){
-		RecyclerViewAdapter myAdapter = new RecyclerViewAdapter(this, listData);
-		recyclerView.setLayoutManager(new LinearLayoutManager(this));
-		recyclerView.setAdapter(myAdapter);
+			});
+		}
 	}
 }

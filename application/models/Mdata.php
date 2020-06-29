@@ -5,7 +5,7 @@ class Mdata extends CI_Model
     // mengambil data login tertentu
   public function get_login($id){
 
-    $this->db->where('id_pem',$id);
+    $this->db->where('id_pemilik',$id);
     $login = $this->db->get('datakos');
     $response['status']=200;
     $response['error']=false;
@@ -27,7 +27,7 @@ class Mdata extends CI_Model
       return $this->empty_response();
     }else{
       $where = array(
-        "id_kos"=>$id
+        "id_pemilik"=>$id
       );
 
       $set = array(
@@ -55,5 +55,11 @@ class Mdata extends CI_Model
     }
 
   }
+
+  public function getDataTrans($id = null)
+  {
+    return $this->db->get_where('datakos',['id_kos'=>$id])->result_array();
+  }
+
 }
 
