@@ -24,7 +24,7 @@ foreach ($detail as $p) :
         </div>
         <div class="card-body">
     
-            <form method="post" action="<?= base_url('sewa/aksi_sewa')?>"> 
+            <form method="post" enctype="multipart/form-data" action="<?= base_url('sewa/aksi_sewa')?>"> 
                 <div class="form-group">
                 <input type="hidden" id="id_kos" name="id_kos" value="<?=$id?>">
                 <input type="hidden" id="id_kamar" name="id_kamar" value="<?=$id_k?>">
@@ -97,7 +97,7 @@ foreach ($detail as $p) :
                 
                 <div class="form-group">
                 <label>Foto Bukti Transfer: </label>
-                    <input type="file" class="form-control" id="bukti" name="bukti" value="<?= set_value('bukti'); ?>"required>
+                    <input type="file" class="form-control" id="bukti" name="bukti" value="<?= set_value('bukti'.'name'); ?>"required>
                 </div>
                 <p class="card-text" style="italic"><small>(Foto Bukti transfer anda akan di verifikasi oleh admin, jika telah sesuai maka pihak admin akan menginformasikan kepada pemilik kos agar memberikan kunci kamar dengan segera)</small></p>
                 <a class="btn btn-danger" href="<?= base_url('detail/detail/'. $id ."/". $id_k);?>">Batal</a>

@@ -40,17 +40,19 @@ public function aksi_sewa()
     $status= $this->input->post('status');
     $uploadfoto = $_FILES['bukti']['name'];
     if($uploadfoto=''){}else{
-       $config['upload_path']='./assets/img/bukti_transaksi/';
+       $config['upload_path']='./assets/img/bukti_transaksi';
        $config['allowed_types']='jpg|png|jpeg|jfif';
        $config['max_size']='2000';
 
        $this->load->library('upload',$config);
                  if(!$this->upload->do_upload('bukti')){
-                    echo"Foto bukti transfer gagal diupload";
+                  echo"Foto Bukti transfer gagal diupload!";
+                  
                 }else{
-                    $uploadfoto = $this->upload->data('file_name');
+                  $uploadfoto = $this->upload->data('file_name');
                  }
                 }
+ 
     $data= array(
       'id_sewa'=> $id_sewa,
       'id_penyewa'=> $id_penyewa,
@@ -72,9 +74,12 @@ public function aksi_sewa()
    
     $this->mhome->insert_data($data,'sewa');
 
-    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+    $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
     Proses penyewaan kos telah berhasil, Pihak admin akan menverifikasi data Anda dan segera menginformasikan kepada pemilik kos 
-    </div>');
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>');
     redirect('home/index');
 }
 }?>

@@ -30,7 +30,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div><br><br>
+        </div><br>
         <?= $this->session->flashdata('message');?>
         <div class="row">
           <?php foreach ($kos as $p) :?>
