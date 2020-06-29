@@ -20,6 +20,26 @@ public function get_keyword($keyword){
     return $this->db->get()->result();
 }
 
+public function get_harga_terendah($keyword1,$keyword2){
+    $this->db->from('datakos');
+    $this->db->join('tipekamar','datakos.id_kos = tipekamar.id_kos');
+    $this->db->order_by('harga', 'DESC');
+    $this->db->where('harga >=', $keyword1);
+    $this->db->where('harga <=', $keyword2);
+
+    return $this->db->get()->result();
+}
+
+public function get_harga_tertinggi($keyword1,$keyword2){
+    $this->db->from('datakos');
+    $this->db->join('tipekamar','datakos.id_kos = tipekamar.id_kos');
+    $this->db->order_by('harga', 'DESC');
+    $this->db->where('harga >=', $keyword1);
+    $this->db->where('harga <=', $keyword2);
+
+    return $this->db->get()->result();
+}
+
 public function ambil_id($id, $id_kamar){
     $hasil = $this->db->select('*');
     $hasil = $this->db->from('datakos');
