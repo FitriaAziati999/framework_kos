@@ -16,6 +16,14 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
+	<Button
+		android:id="@+id/beranda"
+		android:layout_width="50dp"
+		android:layout_height="50dp"
+		android:background="@drawable/iconhome"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
 	<de.hdodenhof.circleimageview.CircleImageView
 		android:id="@+id/imgprofile"
 		android:layout_width="100dp"

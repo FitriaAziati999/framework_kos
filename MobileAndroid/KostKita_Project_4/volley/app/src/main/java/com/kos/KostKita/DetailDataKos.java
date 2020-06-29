@@ -33,13 +33,13 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DetailDataKos extends AppCompatActivity {
 	TextView Namakos, Alamatkos, Khususkos, Fasilitaskos, Lingkungankos, Peraturankos;
-	Button lanjut, hapus;
+	Button lanjut, hapus, beranda;
 	String id = "2";
 	RequestQueue requestQueue;
 	ImageView fotokost;
 	ProgressDialog progressDialog;
-	String URL_UPDATE = "http://192.168.100.35/framework_kos/index.php/data/update";
-	String URL_TAMPIL = "http://192.168.100.35/framework_kos/index.php/data/id";
+	String URL_UPDATE = "http://192.168.100.37/framework_kos/index.php/data/update";
+	String URL_TAMPIL = "http://192.168.100.37/framework_kos/index.php/data/id";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class DetailDataKos extends AppCompatActivity {
 		Fasilitaskos  = (TextView) findViewById(R.id.fasilitaskost);
 		Lingkungankos  = (TextView) findViewById(R.id.lingkungankost);
 		Peraturankos  = (TextView) findViewById(R.id.peraturankost);
-
+ 		beranda = (Button)findViewById(R.id.beranda);
 		lanjut = (Button)findViewById(R.id.lanjut);
 
 		hapus = (Button)findViewById(R.id.hapus);
@@ -61,7 +61,14 @@ public class DetailDataKos extends AppCompatActivity {
 		// Setting up received value into TextView.
 		//EmailProfil.setText(EmailProfil.getText() + TempHolder);
 		getUserDetail();
-
+		beranda.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent beranda = new Intent(getApplicationContext(),Beranda.class);
+				startActivity(beranda);
+				finish();
+			}
+		});
 		lanjut.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
