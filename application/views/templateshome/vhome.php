@@ -8,16 +8,16 @@
 
       <div class="col-lg-14">
       <br>
-      <?php
+      <!-- <?php
         if($this->session->flashdata('kosong')) { ?>
          <div class="alert alert-success alert-dismissible">
-         <h2><?php echo $this->session->flashdata('kosong'); ?></h2>
+         <?php echo $this->session->flashdata('kosong'); ?>
         </div>
         
      
         
-        <?php } else { ?>
-
+        <?php } else { ?> -->
+          
           <div id="carouselExampleIndicators" class="carousel slide my-3 mx-4" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -40,13 +40,8 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-<<<<<<< HEAD
         </div><br>
         <?= $this->session->flashdata('message');?>
-=======
-        </div><br><br>
-
->>>>>>> 876e73b6ccb1b9db106769115d3f0505d6c08c26
         <div class="row">
         
         
@@ -61,8 +56,18 @@
                 </h4>
                 <h5>Rp. <?php echo $p->harga?></h5>
                 <h5><?php echo $p->khususkos?></h5>
+                
+                  
+                <h5><?php echo $p->khususkos?></h5>
                 <p class="card-text"><?php echo $p->alamatkos?></p>
-                <a href="<?= base_url('detail/detail/') . $p->id_kos ."/". $p->id_kamar ?>" type="button" class="btn btn-outline-primary">Detail selengkapnya</a>
+                <?php 
+                  if($p->status == "Tersedia"){
+                    echo '<span class="btn btn-success">Tersedia</span>';
+                  }else{
+                    echo '<span class="btn btn-danger">Tidak Tersedia</span>';
+                  }
+                ?>
+                <a href="<?= base_url('home/detail/') . $p->id_kos ."/". $p->id_kamar ?>" type="button" class="btn btn-outline-primary">Detail selengkapnya</a>
                 </div>
               </div>
               <div class="card-footer">
