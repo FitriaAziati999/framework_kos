@@ -43,8 +43,7 @@ class Api_logn extends CI_Controller
         						echo "Login gagal, Password salah! Silahkan cek password anda kembali";
 
         					}else {
-
-        						echo "Login Berhasil";
+                                echo json_encode($a);
         						
 
         					       }
