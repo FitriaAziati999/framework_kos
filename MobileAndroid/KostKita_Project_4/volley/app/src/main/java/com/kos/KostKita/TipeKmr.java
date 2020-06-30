@@ -1,6 +1,7 @@
 package com.kos.KostKita;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.LoginFilter;
 import android.util.Log;
@@ -33,13 +34,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class TipeKmr extends AppCompatActivity {
     TextView Ukuran, Stok, Harga, Penghuni, Fasilitaskamar;
-    Button lanjut, hapus, beranda;
-    String id = "2";
-    RequestQueue requestQueue;
-    ImageView fotokost;
-    ProgressDialog progressDialog;
-    String URL_UPDATE = "http://192.168.1.25/framework_kos/index.php/tipe/update";
-    String URL_TAMPIL = "http://192.168.1.25/framework_kos/index.php/tipe/id";
+    Button lanjut, hapus, beranda, btn_foto;
+    String id = "8";
+    ImageView fotokamar;
+    private Bitmap bitmap;
+    String URL_UPDATE = "http://192.168.100.37/framework_kos/index.php/tipe/update";
+    String URL_TAMPIL = "http://192.168.100.37/framework_kos/index.php/tipe/id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +53,14 @@ public class TipeKmr extends AppCompatActivity {
         Fasilitaskamar  = (TextView) findViewById(R.id.fasilitaskamar);
         beranda = (Button)findViewById(R.id.beranda);
         lanjut = (Button)findViewById(R.id.lanjut);
+        fotokamar = (ImageView)findViewById(R.id.fotokamar);
+        btn_foto = (Button)findViewById(R.id.btn_foto);
 
         hapus = (Button)findViewById(R.id.hapus);
         // Receiving value into activity using intent.
 //		String TempHolder = getIntent().getStringExtra("emailpemTAG");
         // Setting up received value into TextView.
+
         getUserDetail();
         beranda.setOnClickListener(new View.OnClickListener() {
             @Override

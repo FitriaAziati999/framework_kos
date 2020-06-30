@@ -98,7 +98,7 @@
 			android:layout_height="wrap_content"
 			android:layout_below="@id/peraturankost"
 			android:layout_marginTop="20dp"
-			android:text="Lanjut"
+			android:text="Simpan"
 			android:textColor="#ffffff"
 			android:background="@color/colorAccent"/>
 

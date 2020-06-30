@@ -16,7 +16,6 @@
         <activity android:name=".TipeKmr"></activity>
         <activity android:name=".DetailDataKos" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".TipeKamar" />
         <activity android:name=".Notif" />
         <activity android:name=".Beranda" />
         <activity android:name=".RegisterActivity" />

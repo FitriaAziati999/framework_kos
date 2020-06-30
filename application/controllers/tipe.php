@@ -27,27 +27,10 @@ class Tipe extends REST_Controller{
       $this->put('harga'),
       $this->put('penghuni'),
       $this->put('fasilitaskamar'),
-      $this->put('fotokamar'),
       );
 
 
 $this->response($response);
-}
-
-public function index_get(){
-  $id = $this->get('id_kamar');
-  if ($id === null || $id === ''){
-    $this->response([
-      'status' => FALSE,
-      'message' => 'login dahulu'
-    ], REST_Controller::HTTP_NOT_FOUND);
-}else{
-  $datakos = $this->Mdata->getDataTrans($id);
-  $this->response([
-    'status' => TRUE,
-    'data' => $datakos
-  ], REST_Controller::HTTP_OK);
- }
 }
 
 }

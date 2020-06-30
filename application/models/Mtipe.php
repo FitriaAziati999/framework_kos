@@ -21,7 +21,7 @@ class Mtipe extends CI_Model
     return $response;
   }
 
-  public function update_datakos($id,$ukuran,$stok,$harga,$penghuni,$fasilitaskamar,$fotokamar){
+  public function update_tipe($id,$ukuran,$stok,$harga,$penghuni,$fasilitaskamar){
 
     if($id == '' || empty($ukuran) || empty($stok)){
       return $this->empty_response();
@@ -35,8 +35,7 @@ class Mtipe extends CI_Model
         "stok"=>$stok,
         "harga"=>$harga,
         "penghuni"=>$penghuni,
-        "fasilitaskamar"=>$fasilitaskamar,
-        "fotokamar"=>$fotokamar,
+        "fasilitaskamar"=>$fasilitaskamar
       );
 
       $this->db->where($where);

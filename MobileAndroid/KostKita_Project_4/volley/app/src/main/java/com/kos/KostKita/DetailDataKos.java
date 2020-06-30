@@ -38,8 +38,8 @@ public class DetailDataKos extends AppCompatActivity {
 	RequestQueue requestQueue;
 	ImageView fotokost;
 	ProgressDialog progressDialog;
-	String URL_UPDATE = "http://192.168.1.25/framework_kos/index.php/data/update";
-	String URL_TAMPIL = "http://192.168.1.25/framework_kos/index.php/data/id";
+	String URL_UPDATE = "http://192.168.100.37/framework_kos/index.php/data/update";
+	String URL_TAMPIL = "http://192.168.100.37/framework_kos/index.php/data/id";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
