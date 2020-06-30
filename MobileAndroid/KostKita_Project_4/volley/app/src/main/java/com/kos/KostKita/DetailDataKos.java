@@ -38,8 +38,8 @@ public class DetailDataKos extends AppCompatActivity {
 	RequestQueue requestQueue;
 	ImageView fotokost;
 	ProgressDialog progressDialog;
-	String URL_UPDATE = "http://192.168.100.37/framework_kos/index.php/data/update";
-	String URL_TAMPIL = "http://192.168.100.37/framework_kos/index.php/data/id";
+	String URL_UPDATE = "http://192.168.1.25/framework_kos/index.php/data/update";
+	String URL_TAMPIL = "http://192.168.1.25/framework_kos/index.php/data/id";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +57,8 @@ public class DetailDataKos extends AppCompatActivity {
 
 		hapus = (Button)findViewById(R.id.hapus);
 		// Receiving value into activity using intent.
-		String TempHolder = getIntent().getStringExtra("emailpemTAG");
+//		String TempHolder = getIntent().getStringExtra("emailpemTAG");
 		// Setting up received value into TextView.
-		//EmailProfil.setText(EmailProfil.getText() + TempHolder);
 		getUserDetail();
 		beranda.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -76,13 +75,6 @@ public class DetailDataKos extends AppCompatActivity {
 			}
 		});
 
-		lanjut.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent TipeKamar = new Intent(getApplicationContext(),TipeKamar.class);
-				startActivity(TipeKamar);
-			}
-		});
 	}
 
 	private void getUserDetail(){
@@ -200,7 +192,7 @@ public class DetailDataKos extends AppCompatActivity {
 			@Override
 			protected Map<String, String> getParams() {
 				Map<String, String> params = new HashMap<>();
-				params.put("id_kos", idkos);
+				params.put("id_pemilik", idkos);
 				params.put("namakos", Namakos);
 				params.put("alamatkos", Alamatkos);
 				params.put("khususkos", Khususkos);

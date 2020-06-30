@@ -4,16 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TipeKamar"
+    tools:context=".TipeKmr"
     android:padding="15dp">
 
     <RelativeLayout
-        android:id="@+id/relative_id"
+        android:id="@+id/rel_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/beranda"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/iconhome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
-            android:id="@+id/GambarKamar"
+            android:id="@+id/GambarKost"
             android:layout_width="match_parent"
             android:layout_height="230dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -22,81 +30,75 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btn_kamar"
+            android:id="@+id/btn_foto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ganti foto"
-            android:layout_below="@id/GambarKamar"/>
+            android:layout_below="@id/GambarKost"/>
 
 
         <EditText
-            android:id="@+id/Ukuran_Kamar"
-            android:hint="Ukuran Kamar"
+            android:id="@+id/ukurankos"
+            android:hint="Ukuran Kamar Kost"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_kamar"
+            android:layout_below="@+id/btn_foto"
             />
         <EditText
-            android:id="@+id/Stok_Kost"
-            android:hint="Stok Kamar"
+            android:id="@+id/stokkos"
+            android:hint="Stok Kost"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Ukuran_Kamar"
+            android:layout_below="@+id/ukurankos"
             />
         <EditText
-            android:id="@+id/Harga_Kost"
+            android:id="@+id/hargakos"
             android:hint="Harga Kost"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Stok_Kost"
+            android:layout_below="@+id/stokkos"
             />
         <EditText
-            android:id="@+id/Kapasitas_Kamar"
-            android:hint="Kapasitas Kamar"
+            android:id="@+id/kapasitas"
+            android:hint="Kapasitas Kamar Kost"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Harga_Kost"
+            android:layout_below="@+id/hargakos"
             />
         <EditText
-            android:id="@+id/Fasilitas_Kamar"
-            android:hint="Fasilitas Kamar"
+            android:id="@+id/fasilitaskamar"
+            android:hint="Fasilitas Kamar Kost"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Kapasitas_Kamar"
+            android:layout_below="@+id/kapasitas"
             />
-
         <Button
-            android:id="@+id/btn_simpan"
+            android:id="@+id/lanjut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Fasilitas_Kamar"
-            android:layout_marginTop="56dp"
-            android:background="@color/colorAccent"
+            android:layout_below="@id/fasilitaskamar"
+            android:layout_marginTop="20dp"
             android:text="Simpan"
             android:textColor="#ffffff"
-            android:layout_marginLeft="0dp"/>
+            android:background="@color/colorAccent"/>
 
         <Button
-            android:id="@+id/btn_hapus2"
+            android:id="@+id/hapus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btn_simpan"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:text="Hapus" />
+            android:layout_below="@+id/lanjut"
+            android:layout_marginTop="5dp"
+            android:text="hapus"/>
 
     </RelativeLayout>
 

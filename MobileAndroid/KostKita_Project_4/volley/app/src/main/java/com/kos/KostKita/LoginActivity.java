@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     String EmailHolder, PasswordHolder;
     ProgressDialog progressDialog;
-    String HttpUrl = "http://192.168.100.37/framework_kos/api_logn/sign_In";
+    String HttpUrl = "http://192.168.1.25/framework_kos/api_logn/sign_In";
     Boolean CheckEditText;
 
     @Override

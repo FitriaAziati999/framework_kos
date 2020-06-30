@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     String NameHolder, EmailHolder, UsernameHolder, alamatHolder, NoHPHolder,  NikKtpHolder, PasswordHolder, Password2Holder;
     ProgressDialog progressDialog;
-    String HttpUrl = "http://192.168.1.21/framework_kos/api_register/daftar";
+    String HttpUrl = "http://192.168.1.15/framework_kos/api_register/daftar";
     Boolean CheckEditText;
 
     @Override

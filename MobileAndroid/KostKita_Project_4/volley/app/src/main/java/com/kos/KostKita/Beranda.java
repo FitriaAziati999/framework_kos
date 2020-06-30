@@ -52,7 +52,7 @@ public class Beranda extends AppCompatActivity {
         Mtipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tipe = new Intent(getApplicationContext(),TipeKamar.class);
+                Intent tipe = new Intent(getApplicationContext(),TipeKmr.class);
                 startActivity(tipe);
                 finish();
             }

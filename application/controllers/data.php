@@ -21,7 +21,6 @@ class Data extends REST_Controller{
   public function update_put(){
     
     $response = $this->Mdata->update_datakos(
-      $this->put('id_kost'),
       $this->put('id_pemilik'),
       $this->put('namakos'),
       $this->put('alamatkos'),

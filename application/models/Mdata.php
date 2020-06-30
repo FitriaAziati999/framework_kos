@@ -56,10 +56,10 @@ class Mdata extends CI_Model
 
   }
 
-  public function getDataTrans($id = null)
-  {
-    return $this->db->get_where('datakos',['id_kos'=>$id])->result_array();
-  }
+  // public function getDataTrans($id = null)
+  // {
+  //   return $this->db->get_where('datakos',['id_kos'=>$id])->result_array();
+  // }
 
 }
 
