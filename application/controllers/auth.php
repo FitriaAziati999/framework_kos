@@ -53,7 +53,7 @@ class Auth extends CI_Controller
 				$this->session->set_userdata('nikpen', $cek->nikpen);
 				$this->session->set_userdata('role_id', $cek->role_id);
 				switch($cek->role_id){
-				case 1 : 	redirect('templatesadmin/vadmin');
+				case 1 : 	redirect('admin/dashboard');
 								break;
 				case 2 : 	redirect('home/index');
 							//	break;

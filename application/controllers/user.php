@@ -6,8 +6,9 @@ class User extends CI_Controller
    public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('form_validation');
-		$this->load->model('muser');
+		$this->load->library('form_validation','url');
+      $this->load->model('muser');
+      
 	}
    
    public function dashboard()
@@ -258,7 +259,7 @@ class User extends CI_Controller
       
          //cek form validasi
          if ($this->form_validation->run()== FALSE){
-            $data['title']='Kos kita- Ganti password';
+            $data['title']='Kos kita-Ganti password';
             $this->load->view('templatesuser/vheaderuser',$data);
             $this->load->view('templatesuser/vsidebaruser');
             $this->load->view('templatesuser/vgantipwd');
@@ -270,21 +271,34 @@ class User extends CI_Controller
             $this->muser->gantipwd($id,$data,'penyewa');
             
             $this->session->set_flashdata('pesan', '<div class="alert alert-success role="alert">
-            <strong> Selamat !</strong> Password anda berhasil di update ! </div>');
+            <strong> Selamat,</strong> Password anda berhasil di update ! </div>');
             redirect('user/gantipwd');
          }    
 
       }
-
+//function untuk melihat riwayat transaksi maupun penyewaaan si penyewa
       public function riwayatkos()
-      {     $data['penyewa']=$this->db->get_where('penyewa',['id_penyewa'=> $this->session->userdata('id_penyewa')])->row_array();
-            $tampil=$this->muser->riwayatkos($data,'sewa');
-         //$query['sewa']=$this->db->query("SELECT * FROM sewa where id_penyewa='id_penyewa'")->result();
-            $data['title']='Kos kita- Riwayat Kos';
-            $this->load->view('templatesuser/vheaderuser',$data);
+//mencari id_penyewadi tabel sewa
+      {  $data['sewa']=$this->db->get_where('sewa',['id_penyewa'=> $this->session->userdata('id_penyewa')])->row_array();   
+//$where= array('id_penyewa'=> $this->session->userdata('id_penyewa'));
+//$query['sewa']=$this->db->query("SELECT * FROM sewa join datakos USING id_kos JOIN tipekamar USING id_kamar JOIN penyewa USING id_penyewa WHERE penyewa.id_penyewa);
+
+            $title['title']='Kos kita-Riwayat Kos';
+            $this->load->view('templatesuser/vheaderuser', $title);
             $this->load->view('templatesuser/vsidebaruser');
-            $this->load->view('templatesuser/vriwayatkos',$tampil);
+            $this->load->view('templatesuser/vriwayatkos',$data);
             $this->load->view('templatesuser/vfooteruser');
+      }
+      
+      //function menampilkan kos favorit berdasarkan id penyewa yang diambil dari tabel wishlist
+      public function kosfav(){
+         $data['kosfav']=$this->db->get_where('wishlist',['id_penyewa'=> $this->session->userdata('id_penyewa')])->row_array();   
+         $title['title']='Kos kita-Kos Favorit';
+            $this->load->view('templatesuser/vheaderuser', $title);
+            $this->load->view('templatesuser/vsidebaruser');
+            $this->load->view('templatesuser/vkosfav',$data);
+            $this->load->view('templatesuser/vfooteruser');
+      
       }
 }
 ?>

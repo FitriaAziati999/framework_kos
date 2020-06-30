@@ -15,7 +15,8 @@
         </div>
         
      
-        <?php } else { ?> -->
+        
+        <?php } else { ?>
           
           <div id="carouselExampleIndicators" class="carousel slide my-3 mx-4" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -56,8 +57,6 @@
                 <h5>Rp. <?php echo $p->harga?></h5>
                 <h5><?php echo $p->khususkos?></h5>
                 
-                  
-                <h5><?php echo $p->khususkos?></h5>
                 <p class="card-text"><?php echo $p->alamatkos?></p>
                 <?php 
                   if($p->status == "Tersedia"){

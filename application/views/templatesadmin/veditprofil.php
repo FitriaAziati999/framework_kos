@@ -34,8 +34,8 @@
     <div class="card" style="max-width: 1200px;">
     
   
-       <?php echo form_open_multipart('user/aksi_editprofil');?>
-      <!-- <form class="useredit" method="post" action="<?= base_url('user/aksi_editprofil'); ?>">-->
+       <?php echo form_open_multipart('admin/aksi_editprofil');?>
+      <!-- <form class="useredit" method="post" action="<?= base_url('admin/aksi_editprofil'); ?>">-->
 
         <div class="form-row">
             <div class="col-md-6">

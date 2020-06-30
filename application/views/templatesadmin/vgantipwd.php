@@ -37,7 +37,7 @@
       <?= $this->session->flashdata('pesan');?><br></br>
           <div class="col-md-12">
           
-          <form class="pwd" method="post" action="<?php echo base_url ('user/aksi_gantipwd'); ?> ">
+          <form class="pwd" method="post" action="<?php echo base_url ('admin/aksi_gantipwd'); ?> ">
                   <div class="form-group row">
                       <label for="inputPassword" class="col-sm-3 col-form-label">Password Baru</label>
                   <div class="col-sm-9">

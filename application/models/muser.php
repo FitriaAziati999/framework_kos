@@ -51,11 +51,12 @@ class Muser extends Ci_Model{
         
     }
 
-    public function riwayatkos($data,$table)
+    public function riwayatkos($table)
     {
        
-        $this->db->get('sewa');
+        $this->db->get($table);
     }
+ 
 
 
 }?>
