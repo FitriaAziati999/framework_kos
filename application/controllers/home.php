@@ -19,36 +19,27 @@
   }
 
  //function pencarian
-  public function search(){
-    $keyword =$this->input->post('keyword');
-    //$data['kos'] = $this->mhome->get_keyword($keyword);
-    $data['kos'] = $this->mhome->get_keyword($keyword);
+ public function search(){
+  $keyword =$this->input->post('keyword');
+  //$data['kos'] = $this->mhome->get_keyword($keyword);
+
+  $data = [
+           "kos" => $this->mhome->get_keyword($keyword),
+           "All" => $this->mhome->innerjoin(),
+  ]; 
+
+  if(!$data['kos']){
+    ?> <script>alert('Pencarian Tidak Ditemukan, Silakan Melakukan Pencarian Kembali');window.location='index';</script> <?php
     $this->load->view('templateshome/vheaderhome');
     $this->load->view('templateshome/vhome',$data);
     $this->load->view('templateshome/vfooterhome');
-    $data = [
-             "kos" => $this->mhome->get_keyword($keyword),
-             "All" => $this->mhome->innerjoin(),
-    ];
-
-    if(!$data['kos']){
-      $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-   Pencarian tidak ditemukan, silahkan melakukan pencarian kembali
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>');
-      redirect('home/index');
-      //$this->load->view('templateshome/vheaderhome');
-      //$this->load->view('templateshome/vhome',$data);
-      //$this->load->view('templateshome/vfooterhome');
-    } //else{
-      //$this->load->view('templateshome/vheaderhome');
-      //$this->load->view('templateshome/vhome',$data);
-      //$this->load->view('templateshome/vfooterhome');
-    //}
-
+  } else{
+    $this->load->view('templateshome/vheaderhome');
+    $this->load->view('templateshome/vhome',$data);
+    $this->load->view('templateshome/vfooterhome');
   }
+
+}
 
   public function search_terendah(){
   $keyword1 =$this->input->post('min'); // Menagkap Input Harga Terendah

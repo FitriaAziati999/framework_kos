@@ -8,14 +8,13 @@
 
       <div class="col-lg-14">
       <br>
-      <!-- <?php
+      <?php
         if($this->session->flashdata('kosong')) { ?>
          <div class="alert alert-success alert-dismissible">
          <?php echo $this->session->flashdata('kosong'); ?>
         </div>
         
      
-        
         <?php } else { ?> -->
           
           <div id="carouselExampleIndicators" class="carousel slide my-3 mx-4" data-ride="carousel">
