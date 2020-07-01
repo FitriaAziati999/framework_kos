@@ -9,5 +9,14 @@ class Api_model extends CI_Model
 	{
 		return $this->db->get('sewa')->result_array();
 	}
+
+	function getIdCat($id){
+
+		return $this->db->get_where('sewa', ['id_pemilik' => $id]);
+
+
+
+
+	}
 }
 

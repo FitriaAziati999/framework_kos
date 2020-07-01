@@ -26,7 +26,7 @@ class Api_notif extends CI_Controller
 			if ($method == "GET") {
 
 				
-				$id = $this->input->get('id');
+				$id = $this->input->get('id_pemilik');
 				if ($id == null) {
 
 					$fetchAll = $this->api_notif->getAllSewa();
@@ -38,12 +38,50 @@ class Api_notif extends CI_Controller
 							'nama_penyewa' => $fetch['namapen'],
 							'alamat_penyewa' => $fetch['alamatpen'],
 							'nama_kos' => $fetch['namakos'],
-							'harga_sewa' => $fetch['harga']
+							'harga_sewa' => $fetch['harga'],
+							'masuk_kos' => $fetch['masuk_kos'],
+							'nopen' => $fetch['nopen']
+
+						];
+						
+						array_push($response, $get);
+					}
+
+				} else {
+
+					$fetchIdCat = $this->api_notif->getIdCat($id);
+
+					$fetch = $fetchIdCat->row_array();
+
+					if ($fetchIdCat->num_rows() > 0) {
+
+
+						$get = [
+
+							'id_pemilik' => $fetch['id_pemilik'],
+							'nama_penyewa' => $fetch['namapen'],
+							'alamat_penyewa' => $fetch['alamatpen'],
+							'nama_kos' => $fetch['namakos'],
+							'harga_sewa' => $fetch['harga'],
+							'masuk_kos' => $fetch['masuk_kos'],
+							'nopen' => $fetch['nopen']
 
 						];
 
-						array_push($response, $get);
+		
+					} else {
+
+							$get = [
+
+							'id_pemilik' => null,
+
+							];
+					
+
 					}
+
+
+					array_push($response, $get);
 				}
 
 				echo header("Content-Type: application/json");
