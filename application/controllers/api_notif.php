@@ -38,7 +38,9 @@ class Api_notif extends CI_Controller
 							'nama_penyewa' => $fetch['namapen'],
 							'alamat_penyewa' => $fetch['alamatpen'],
 							'nama_kos' => $fetch['namakos'],
-							'harga_sewa' => $fetch['harga']
+							'harga_sewa' => $fetch['harga'],
+							'masuk_kos' => $fetch['masuk_kos'],
+							'nopen' => $fetch['nopen']
 
 						];
 						
@@ -60,7 +62,9 @@ class Api_notif extends CI_Controller
 							'nama_penyewa' => $fetch['namapen'],
 							'alamat_penyewa' => $fetch['alamatpen'],
 							'nama_kos' => $fetch['namakos'],
-							'harga_sewa' => $fetch['harga']
+							'harga_sewa' => $fetch['harga'],
+							'masuk_kos' => $fetch['masuk_kos'],
+							'nopen' => $fetch['nopen']
 
 						];
 
