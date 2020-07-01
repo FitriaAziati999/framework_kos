@@ -48,7 +48,7 @@
           <?php foreach ($kos as $p) :?>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="<?= base_url(); ?>assets/img/foto_kos/<?php echo $p->fotokamar ?>" alt=""></a>
+              <a href="#"><img class="card-img-top" src="<?= base_url(); ?>assets/img/foto_kos/<?php echo $p->fotokamar ?>" height="350" width="300"></a>
               <div class="card-body">
               <div class="text-center">
                <h4 class="card-title">
