@@ -20,7 +20,7 @@
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-                <span class="mr-4 d-none d-lg-inline text-black-100 ">Welcome <?php echo $this->session->userdata('userpen')?> on  <?php echo $penyewa['date_created'];?></span>
+                <span class="mr-4 d-none d-lg-inline text-black-100 "><?php echo $this->session->userdata('userpen')?> on  <?php echo $this->session->userdata('date_created')?></span>
                 <img class="img-profile rounded-circle" width="35" height="35" src='<?=base_url()?>assets/img/profil/<?= $this->session->userdata('fotopen');?>'>
               </a>
             </li>

@@ -52,6 +52,7 @@ class Auth extends CI_Controller
 				$this->session->set_userdata('emailpen', $cek->emailpen);
 				$this->session->set_userdata('nikpen', $cek->nikpen);
 				$this->session->set_userdata('role_id', $cek->role_id);
+				$this->session->set_userdata('date_created', $cek->date_created);
 				switch($cek->role_id){
 				case 1 : 	redirect('admin/dashboard');
 								break;
@@ -106,7 +107,7 @@ class Auth extends CI_Controller
 		$this->form_validation->set_rules(
 			'alamatpen',
 			'address',
-			'required|max_length[50]',
+			'required|max_length[100]',
 			[
 				'required' => ' Isi alamat anda yang sesuai dan benar!',
 				'max_length' => 'Isi alamat anda yang sesuai dan benar!'
@@ -194,6 +195,7 @@ class Auth extends CI_Controller
 			$nikpen =	$this->input->post('nikpen');
 			$role_id= $this->input->post('role_id');
 			$date_created= $this->input->post('date_created');
+			$last_update= $this->input->post('last_update');
 			$is_active= $this->input->post('is_active');
 			
 			$data= array(
@@ -208,6 +210,7 @@ class Auth extends CI_Controller
 				'emailpen' =>$emailpen ,
 				'nikpen' =>$nikpen,
 				'role_id' =>2,
+				'last_update'=>date('Y-m-d'),
 				'date_created'=>date('Y-m-d'),
 				'is_active' =>1
 			);

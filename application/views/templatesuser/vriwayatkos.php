@@ -44,7 +44,6 @@
                             <th>Alamat kos</th>
                             <th>Harga</th>
                             <th style="center">Masuk Kos pada bulan</th>
-                            <th>Foto Bukti Transfer</th>
                             <th>Rekening Tujuan</th>
                             <th>Rekening Anda</th>
                             <th>Tanggal Bayar</th>
@@ -61,7 +60,6 @@
                             <td><?php echo $sewa['alamatkos'];?></td>
                             <td><?php echo $sewa['harga'];?></td>
                             <td><?php echo $sewa['masuk_kos'];?></td>
-                            <td><?=base_url('assets/img/bukti_transaksi/')?>.<?php echo $sewa['bukti']?></td>
                             <td><?php echo $sewa['rek_tujuan'];?>.</td>
                             <td><?php echo $sewa['rek_penyewa'];?></td>
                             <td><?php echo $sewa['tgl_bayar'];?></td>

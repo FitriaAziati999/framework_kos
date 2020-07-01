@@ -251,7 +251,7 @@ class User extends CI_Controller
                'min_length' => 'Password terdiri atas 4 sampai 13 digit',
                'max_length' => 'Password terdiri atas 4 sampai 13 digit',
                'alpha_numerik' => 'Password terdiri atas angka dan abjad',
-               'trim' => 'Harap tidak menggunakan spasi',
+               'trim' => 'Harap tidak menggunakan spasi'
             ]
          );
          $passpen= $this->input->post('passpen');
