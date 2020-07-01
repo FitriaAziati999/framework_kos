@@ -52,7 +52,7 @@
 
     <!-- Nav Item - Kos Favorit -->
     <li class="nav-item">
-      <a class="nav-link" href="tables.html">
+      <a class="nav-link" href="<?= base_url('user/kosfav')?>">
       <i class="fas fa-heart"></i>
       <span>Kos Favorit</span></a>
     </li>

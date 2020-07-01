@@ -15,7 +15,8 @@
         </div>
         
      
-        <?php } else { ?> -->
+        
+        <?php } else { ?>
           
           <div id="carouselExampleIndicators" class="carousel slide my-3 mx-4" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -47,7 +48,7 @@
           <?php foreach ($kos as $p) :?>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="<?= base_url(); ?>assets/img/foto_kos/<?php echo $p->fotokamar ?>" alt=""></a>
+              <a href="#"><img class="card-img-top" src="<?= base_url(); ?>assets/img/foto_kos/<?php echo $p->fotokamar ?>" height="350" width="300"></a>
               <div class="card-body">
               <div class="text-center">
                <h4 class="card-title">
@@ -56,8 +57,6 @@
                 <h5>Rp. <?php echo $p->harga?></h5>
                 <h5><?php echo $p->khususkos?></h5>
                 
-                  
-                <h5><?php echo $p->khususkos?></h5>
                 <p class="card-text"><?php echo $p->alamatkos?></p>
                 <?php 
                   if($p->status == "Tersedia"){

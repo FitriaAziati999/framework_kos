@@ -33,7 +33,6 @@ foreach ($detail as $p) :
             <div class="col-md-6">
             <img  src="<?= base_url(); ?>assets/img/foto_kos/<?= $foto; ?>"  alt ="" height="550" width="500">
             </div>
-
             <div class="col-md-6">
             <h1 class="my-3"><b><?= $nama?></b></h1>
             <h4 class="my-3"><i>RP.</i> <?= $harga;?></h4>
@@ -74,11 +73,40 @@ foreach ($detail as $p) :
             </div>
 
             <div class="col-md-3 col-sm-4 mb-3">
-            <a class="btn btn-outline-primary" href="https://api.WhatsApp.com/send?phone=<?= $nopemilik;?>"><i class="fas fa-phone-alt"></i> Tanya Pemilik</a>
+            <a class="btn btn-outline-primary" href="https://api.WhatsApp.com/send?phone=<?= $nopemilik;?>"> Tanya Pemilik</a>
             </div>
-
+            <!-- Pengecekan apakah ada user yang masuk jika iya maka tombol dtampilkan -->
+            <?php if ($this->session->userdata('id_penyewa')){ ?>
             <div class="col-md-3 col-sm-4 mb-3">
-            <a class="btn btn-outline-primary" href="<?= base_url('home/favoritkos/'. $id ."/". $id_k);?>"><i class="fas fa-heart"></i> Kos favorit </a>
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#kosfav" ><i class="fas fa-heart"></i> Kos favorit </button>
+            </div><?php } ?>
+            <!-- Modal -->
+            <div class="modal fade" id="kosfav" role="dialog" >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h7 class="modal-title" id="exampleModalLabel">Apakah anda ingin menjadikan kos ini favorit? </h7>
+                    <button type="button" class="close" data-dismiss="modal" >
+            <!--<span aria-hidden="true">&times;</span>-->
+                    </button>
+            <!-- BodyModal untuk pendifinisian ke database -->       
+            <form method="post" enctype="multipart/form-data" action="<?= base_url('home/aksi_favoritkos')?>"> 
+                  <div class="modal-body">
+                    <div class="form-group">
+                    <input type="hidden" id="id_kos" name="id_kos" value="<?=$id?>">
+                    <input type="hidden" id="id_kamar" name="id_kamar" value="<?=$id_k?>">
+                    <input type="hidden" id="id_penyewa" name="id_penyewa" value="<?php echo $this->session->userdata('id_penyewa');?>">
+                    </div>
+                    </div>
+                    <a class="btn btn-danger" href="<?= base_url('detail/detail/'. $id ."/". $id_k);?>">Batal</a>
+                    <button type="submit" class="btn btn-primary">iya</button>
+                    </form>
+                  <!-- Button trigger modal -->
+                  </div>
+                  
+                </div>
+              </div>
+            </div> <!-- end Modal -->
             </div>
 
         </div>

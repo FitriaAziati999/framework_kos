@@ -14,7 +14,7 @@ foreach ($detail as $p) :
     $tampung = $p['penghuni'];
     $harga = $p['harga'];
     $status = $p['status'];
-    $id_pemilik = $p['id_pemilik'];
+    $id_p = $p['id_pemilik'];
 ?>
 
 <div class="container">
@@ -28,7 +28,7 @@ foreach ($detail as $p) :
                 <div class="form-group">
                 <input type="hidden" id="id_kos" name="id_kos" value="<?=$id?>">
                 <input type="hidden" id="id_kamar" name="id_kamar" value="<?=$id_k?>">
-                <input type="hidden" id="id_pemilik" name="id_pemilik" value="<?=$id_pemilik?>">
+                <input type="hidden" id="id_pemilik" name="id_pemilik" value="<?=$id_p?>">
                 <input type="hidden" id="id_penyewa" name="id_penyewa" value="<?php echo $this->session->userdata('id_penyewa');?>">
                     <label>Nama kos :</label><br>
                     <input type="text" class="form-control" id="namakos" name="namakos" value="<?= $nama?>"readonly>

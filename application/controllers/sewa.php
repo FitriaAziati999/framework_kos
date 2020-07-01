@@ -27,6 +27,7 @@ public function aksi_sewa()
     $id_penyewa = $this->input->post('id_penyewa');
     $id = $this->input->post('id_kos');
     $id_k = $this->input->post('id_kamar');
+    $id_p = $this->input->post('id_pemilik');
     $namakos = $this->input->post('namakos');
     $alamatkos = $this->input->post('alamatkos');
     $harga = $this->input->post('harga');
@@ -58,6 +59,7 @@ public function aksi_sewa()
       'id_penyewa'=> $id_penyewa,
       'id_kos' =>  $id,
       'id_kamar' => $id_k ,
+      'id_pemilik' => $id_p ,
       'namakos' => $namakos ,
       'alamatkos'=>  $alamatkos,
       'harga'=>  $harga,

@@ -8,7 +8,7 @@ public function innerjoin(){
     $query= $this->db->get();
     return $query->result();
 }
-
+//function pencarian
 public function get_keyword($keyword){
     $this->db->select('*');
     $this->db->from('datakos');
@@ -19,7 +19,6 @@ public function get_keyword($keyword){
     $this->db->or_like('khususkos', $keyword);
     return $this->db->get()->result();
 }
-
 public function get_harga_terendah($keyword1,$keyword2){
     $this->db->from('datakos');
     $this->db->join('tipekamar','datakos.id_kos = tipekamar.id_kos');
@@ -39,7 +38,7 @@ public function get_harga_tertinggi($keyword1,$keyword2){
 
     return $this->db->get()->result();
 }
-
+//ambil id untuk menampilkan detailkos
 public function ambil_id($id, $id_kamar){
     $hasil = $this->db->select('*');
     $hasil = $this->db->from('datakos');
@@ -64,17 +63,19 @@ public function tampil_sewa($id, $id_k)
         $query= $this->db->get();
         return $query->result_array();
     }
-
+//insert data transaksi ke tabel sewa
 public function insert_data( $data,$table)
     {
         
         $this->db->insert('sewa',$data);
         
     }
-
-    public function insert_fav($data,$table)
+//mencari  id data kos dan id barang  untuk dimasukkan  ke tabel wishlist
+public function insert_kosfav( $data,$table)
     {
+        
         $this->db->insert('wishlist',$data);
+        
     }
 
 }
