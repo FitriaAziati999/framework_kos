@@ -36,7 +36,7 @@ class Admin extends CI_Controller
         if ($con) {
             if ($con['is_activate'] == 1) {
                 if (password_verify($password, $con['passadmin'])) {
-                    $data = $con['emailadmin'];
+                    $data = ['email' => $con['emailadmin']];
                     $this->session->set_userdata($data);
 
                     redirect('home');
@@ -88,9 +88,9 @@ class Admin extends CI_Controller
                 'passadmin' => password_hash($this->input->post('pass'), PASSWORD_DEFAULT),
                 'noadmin' => $this->input->post('telp'),
                 'emailadmin' => $this->input->post('email', true),
-                'image' => 'default.jpg',
+                'image' => 'default.png',
                 'alamatadmin' => $this->input->post('alamat'),
-                'is_activate' => 1,
+                'is_activate' => 0,
                 'date_create' => time(),
 
 
@@ -100,5 +100,10 @@ class Admin extends CI_Controller
             Data has been created!!</div>');
             redirect('admin');
         }
+    }
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('admin');
     }
 }
