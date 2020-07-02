@@ -1,89 +1,107 @@
 <?php
+ class Home extends Ci_Controller
+ {
+  public function __construct()
+  {
+    parent::__construct();
+  $this->load->model('mhome','',TRUE);
+  $this->load->helper(array('form','url'));
+  $this->load->library('form_validation','cart');
+  }
+  //function home atau beranda
+  public function index()
+  {
+  //  $data['kos']= $this->db->get ('datakos')->result();
+      $data['kos']  =$this->mhome->innerjoin();
+      $this->load->view('templateshome/vheaderhome');
+      $this->load->view('templateshome/vhome',$data);
+      $this->load->view('templateshome/vfooterhome');
+  }
 
-defined('BASEPATH') or exit('No direct script access allowed');
+ //function pencarian
+ public function search(){
+  $keyword =$this->input->post('keyword');
+  //$data['kos'] = $this->mhome->get_keyword($keyword);
 
-class Home extends CI_Controller
-{
+  $data = [
+           "kos" => $this->mhome->get_keyword($keyword),
+           "All" => $this->mhome->innerjoin(),
+  ]; 
 
-    public function __construct()
-    {
-        parent::__construct();
-        is_logged_in();
-        $this->load->model('Admin_model', 'admin');
-    }
+  if(!$data['kos']){
+    ?> <script>alert('Pencarian Tidak Ditemukan, Silakan Melakukan Pencarian Kembali');window.location='index';</script> <?php
+    $this->load->view('templateshome/vheaderhome');
+    $this->load->view('templateshome/vhome',$data);
+    $this->load->view('templateshome/vfooterhome');
+  } else{
+    $this->load->view('templateshome/vheaderhome');
+    $this->load->view('templateshome/vhome',$data);
+    $this->load->view('templateshome/vfooterhome');
+  }}
 
-    public function index()
-    {
-        // $data['user'] = $this->db->get_where('admin', ['emailadmin' => $this -
-        //     $this->session->userdata('emailadmin')])->row_array();
-        $data['admin'] = $this->admin->getAdmin();
-        // var_dump($data['admin']);
-        // die;
-        // var_dump($_SESSION);
+  public function search_terendah(){
+    $keyword1 =$this->input->post('min'); // Menagkap Input Harga Terendah
+    $keyword2 =$this->input->post('max'); // Menagkap Input Harga Tertinggi
+  
+  
+    $data['kos'] = $this->mhome->get_harga_terendah($keyword1,$keyword2);
+  
+    $this->load->view('templateshome/vheaderhome');
+    $this->load->view('templateshome/vhome',$data);
+    $this->load->view('templateshome/vfooterhome');
+  }
+  
+  public function search_tertinggi(){
+    $keyword1 =$this->input->post('min'); // Menagkap Input Harga Terendah
+    $keyword2 =$this->input->post('max'); // Menagkap Input Harga Tertinggi
+  
+  
+    $data['kos'] = $this->mhome->get_harga_tertinggi($keyword1,$keyword2);
+  
+    $this->load->view('templateshome/vheaderhome');
+    $this->load->view('templateshome/vhome',$data);
+    $this->load->view('templateshome/vfooterhome');
+  }
+    
+  public function info(){
+   
+    $this->load->view('templateshome/vheaderhome');
+    $this->load->view('templateshome/vinfo');
+    $this->load->view('templateshome/vfooterhome');
+  }
+  
+  //function detail kos
+  public function detail($id, $id_kamar) 
+  {
+  $data['kos']  =$this->mhome->innerjoin();
+  $data['detail'] = $this->mhome->ambil_id($id, $id_kamar);
+  $this->load->view('templateshome/vheaderhome');
+  $this->load->view('templateshome/vdetail',$data);
+  $this->load->view('templateshome/vfooterhome');
+  }
+  
+  //function favorit kos
+  public function aksi_favoritkos()
+  {
+   
+      $id_wishlist = $this->input->post('id_wishlist');
+      $id_penyewa = $this->input->post('id_penyewa');
+      $id = $this->input->post('id_kos');
+      $id_k = $this->input->post('id_kamar');
 
-        $this->load->view('Admin/dashboard', $data);
-    }
+      $data= array(
+        'id_wishlist'=> $id_wishlist,
+        'id_penyewa'=> $id_penyewa,
+        'id_kos' =>  $id,
+        'id_kamar' => $id_k 
+      );
+      
+      $this->mhome->insert_kosfav($data,'sewa');
+      redirect('home/index');
+  }
 
-    public function pemilik()
-    {
-        $data['pemilik'] = $this->admin->get_pemilik();
-        $this->load->view('Admin/pemilik', $data);
-    }
-
-    public function penyewa()
-    {
-        $data['penyewa'] = $this->db->get('penyewa')->result_array();
-        $this->load->view('Admin/penyewa', $data);
-    }
-    public function sewa()
-    {
-        $data['sewa'] = $this->db->get('sewa')->result_array();
-        $this->load->view('Admin/sewa', $data);
-    }
-
-    public function updateStatus($id)
-    {
-        $this->admin->setStatus($id);
-        redirect('home');
-    }
-    public function hapus($id)
-    {
-        $this->db->delete('pemilik', ['id_pemilik' => $id]);
-        redirect('home/pemilik');
-    }
-    public function edit()
-    {
-        $id = $this->input->post('id_pemilik');
-        $nama = $this->input->post('nama_pemilik');
-        $alamat = $this->input->post('alamat_pemilik');
-        $no = $this->input->post('no_pemilik');
-        $nik = $this->input->post('nik_pemilik');
-
-        $edit = [
-            'namapem' => $nama,
-            'alamatpem' => $alamat,
-            'nopem' => $no,
-            'nikpem' => $nik
-        ];
-
-        $this->db->where('id_pemilik', $id);
-        $this->db->update('pemilik', $edit);
-
-        redirect('home/pemilik');
-    }
-    public function hapus_penyewa($id)
-    {
-        $this->db->delete('penyewa', ['id_penyewa' => $id]);
-        redirect('home/penyewa');
-    }
-    public function update_sewa($id)
-    {
-        $edit = [
-            'status' => 'Terverifikasi'
-        ];
-        $this->db->where('id_sewa', $id);
-        $this->db->update('sewa', $edit);
-
-        redirect('home/sewa');
-    }
 }
+
+
+
+?>

@@ -176,7 +176,7 @@
                             </a>
                         </li>
                         <li class="nav-item has-treeview menu-open">
-                            <a href="<?= base_url('home/pemilik') ?>" class="nav-link">
+                            <a href="<?= base_url('home1/pemilik') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>
                                     Pemilik
@@ -184,7 +184,7 @@
                             </a>
                         </li>
                         <li class="nav-item has-treeview menu-open">
-                            <a href="<?= base_url('home/sewa') ?>" class="nav-link">
+                            <a href="<?= base_url('home1/sewa') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-shopping-cart"></i>
                                 <p>
                                     Sewa
@@ -246,7 +246,7 @@
                                                     <td><?= $data['noadmin']; ?></td>
                                                     <td><?= $data['alamatadmin']; ?></td>
                                                     <td><img src="<?= base_url('assets/images/profile/') . $data['image']; ?>" alt="profile" width="60px"></td>
-                                                    <td><?php if ($data['is_activate'] == 1) { ?><a href="<?= base_url('home/updateStatus/') . $data['id_admin'] ?>" class="btn btn-primary">Aktif</a><?php } else { ?><a href="<?= base_url('home/updateStatus/') . $data['id_admin'] ?>" class="btn btn-danger">Tidak Aktif</a><?php } ?></td>
+                                                    <td><?php if ($data['is_activate'] == 1) { ?><a href="<?= base_url('home1/updateStatus/') . $data['id_admin'] ?>" class="btn btn-primary">Aktif</a><?php } else { ?><a href="<?= base_url('home1/updateStatus/') . $data['id_admin'] ?>" class="btn btn-danger">Tidak Aktif</a><?php } ?></td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         </tbody>
