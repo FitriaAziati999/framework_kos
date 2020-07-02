@@ -19,4 +19,8 @@ class Admin_model extends CI_Model
             $this->db->update('admin', ['is_activate' => 0]);
         }
     }
+    public function get_pemilik()
+    {
+        return $this->db->get('pemilik')->result_array();
+    }
 }

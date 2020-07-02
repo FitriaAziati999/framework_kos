@@ -168,7 +168,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link active">
+                            <a href="<?= base_url('home') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-code"></i>
                                 <p>
                                     Admin
@@ -176,7 +176,7 @@
                             </a>
                         </li>
                         <li class="nav-item has-treeview menu-open">
-                            <a href="<?= base_url('home/pemilik') ?>" class="nav-link">
+                            <a href="<?= base_url('home/pemilik') ?>" class="nav-link ">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>
                                     Pemilik
@@ -184,13 +184,12 @@
                             </a>
                         </li>
                         <li class="nav-item has-treeview menu-open">
-                            <a href="<?= base_url('home/sewa') ?>" class="nav-link">
+                            <a href="<?= base_url('home/sewa') ?>" class="nav-link active">
                                 <i class="nav-icon fas fa-shopping-cart"></i>
                                 <p>
                                     Sewa
                                 </p>
                             </a>
-                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -232,36 +231,52 @@
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Username</th>
-                                                <th>No Admin</th>
-                                                <th>Alamat</th>
-                                                <th>Image</th>
-                                                <th>Aksi</th>
+                                                <th>Nama Kos</th>
+                                                <th>Alamat Kos</th>
+                                                <th>Harga</th>
+                                                <th>Nama Penyewa</th>
+                                                <th>Alamat Penyewa</th>
+                                                <th>No Penyewa</th>
+                                                <th>Rek Tujuan</th>
+                                                <th>Rek Penyewa</th>
+                                                <th>Tanggal Bayar</th>
+                                                <th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php foreach ($admin as $data) : ?>
+                                            <?php foreach ($sewa as $data) : ?>
                                                 <tr>
-                                                    <td><?= $data['useradmin']; ?></td>
-                                                    <td><?= $data['noadmin']; ?></td>
-                                                    <td><?= $data['alamatadmin']; ?></td>
-                                                    <td><img src="<?= base_url('assets/images/profile/') . $data['image']; ?>" alt="profile" width="60px"></td>
-                                                    <td><?php if ($data['is_activate'] == 1) { ?><a href="<?= base_url('home/updateStatus/') . $data['id_admin'] ?>" class="btn btn-primary">Aktif</a><?php } else { ?><a href="<?= base_url('home/updateStatus/') . $data['id_admin'] ?>" class="btn btn-danger">Tidak Aktif</a><?php } ?></td>
+                                                    <td><?= $data['namakos']; ?></td>
+                                                    <td><?= $data['alamatkos']; ?></td>
+                                                    <td><?= $data['harga']; ?></td>
+                                                    <td><?= $data['namapen']; ?></td>
+                                                    <td><?= $data['alamatpen']; ?></td>
+                                                    <td><?= $data['nopen']; ?></td>
+                                                    <td><?= $data['rek_tujuan']; ?></td>
+                                                    <td><?= $data['rek_penyewa']; ?></td>
+                                                    <td><?= $data['tgl_bayar']; ?></td>
+                                                    <td>
+                                                        <a href="<?= base_url('home/update_sewa/') . $data['id_sewa'] ?>" onclick="return confirm('Apakah anda Yakin ?')" class=" badge badge-<?= $data['status'] == 'Terverifikasi' ? 'success' : 'danger' ?>"><?= $data['status']; ?></a>
+                                                    </td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Username</th>
-                                                <th>No Admin</th>
-                                                <th>Alamat</th>
-                                                <th>Image</th>
-                                                <th>Aksi</th>
+                                                <th>Nama Kos</th>
+                                                <th>Alamat Kos</th>
+                                                <th>Harga</th>
+                                                <th>Nama Penyewa</th>
+                                                <th>Alamat Penyewa</th>
+                                                <th>No Penyewa</th>
+                                                <th>Rek Tujuan</th>
+                                                <th>Rek Penyewa</th>
+                                                <th>Tanggal Bayar</th>
+                                                <th>Status</th>
                                             </tr>
                                         </tfoot>
                                     </table>
-                                </div>
-                                <!-- /.card-body -->
+                                </div> <!-- /.card-body -->
                             </div>
                             <!-- /.card -->
                         </div>
@@ -307,7 +322,7 @@
     <script>
         $(function() {
             $("#example1").DataTable({
-                "responsive": true,
+                "responsive": false,
                 "autoWidth": false,
             });
             $('#example2').DataTable({
@@ -322,5 +337,45 @@
         });
     </script>
 </body>
+<?php foreach ($pemilik as $data) : ?>
+    <!-- Modal -->
+    <div class="modal fade" id="edit<?= $data['id_pemilik'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?= base_url('Home/edit'); ?>" method="post">
+                        <input type="hidden" name="id_pemilik" value="<?= $data['id_pemilik']; ?>">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nama Pemilik</label>
+                            <input name="nama_pemilik" type=" text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $data['namapem'] ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Alamat Pemilik</label>
+                            <input name="alamat_pemilik" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $data['alamatpem'] ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">No Pemilik</label>
+                            <input name="no_pemilik" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $data['nopem'] ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">NIK</label>
+                            <input name="nik_pemilik" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $data['nikpem'] ?>">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
 
 </html>
