@@ -52,7 +52,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginTop="8dp"
 		android:textAlignment="center"
-		android:text="IHZA OKTAVIRA"
+		android:text="Nama profil"
 		android:typeface="serif"
 		android:textSize="18dp"
 		android:textColor="#ffffff"
@@ -68,7 +68,7 @@
 		android:layout_height="20dp"
 		android:layout_marginTop="8dp"
 		android:textAlignment="center"
-		android:text="ihza141099@gmail.com"
+		android:text="Email"
 		android:textColor="#ffffff"
 		app:layout_constraintEnd_toEndOf="@+id/vbg"
 		app:layout_constraintHorizontal_bias="0.497"
@@ -104,7 +104,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_below="@id/textView"
-			android:text="Ihza Oktavira"
+			android:text="-"
 			android:textSize="16dp" />
 		----------------------------------------------------------
 
@@ -123,7 +123,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_below="@id/textView3"
-			android:text="085335718044"
+			android:text="-"
 			android:textSize="16dp" />
 		----------------------------------------------------------
 
@@ -181,7 +181,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_below="@id/textView9"
-			android:text="qqqqq"
+			android:text="-"
 			android:textSize="16dp" />
 		----------------------------------------------------------
 

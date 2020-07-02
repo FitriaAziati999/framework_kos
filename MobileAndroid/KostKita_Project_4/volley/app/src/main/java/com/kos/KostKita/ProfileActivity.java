@@ -88,7 +88,7 @@ public class ProfileActivity extends AppCompatActivity {
 		mIdpem = auth.getKodeUser();
 
 		btnImage = findViewById(R.id.imgprofile);
-		mFotoProfil = "http://192.168.100.88/KostKita_Project_4/cirest/uploads/pemilik/" + auth.getFoto_pemilik();
+		mFotoProfil = "http://192.168.100.37/KostKita_Project_4/cirest/uploads/pemilik/" + auth.getFoto_pemilik();
 		Picasso.get().load(mFotoProfil).into(btnImage);
 
 		initWidgetId();
