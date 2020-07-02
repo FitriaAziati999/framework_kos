@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipeKmr"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:id="@+id/rel_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/beranda"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/iconhome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/GambarKost"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ganti foto"
+            android:layout_below="@id/GambarKost"/>
+
+
+        <EditText
+            android:id="@+id/ukurankos"
+            android:hint="Ukuran Kamar Kost"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_foto"
+            />
+        <EditText
+            android:id="@+id/stokkos"
+            android:hint="Stok Kost"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ukurankos"
+            />
+        <EditText
+            android:id="@+id/hargakos"
+            android:hint="Harga Kost"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stokkos"
+            />
+        <EditText
+            android:id="@+id/kapasitas"
+            android:hint="Kapasitas Kamar Kost"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hargakos"
+            />
+        <EditText
+            android:id="@+id/fasilitaskamar"
+            android:hint="Fasilitas Kamar Kost"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kapasitas"
+            />
+        <Button
+            android:id="@+id/lanjut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fasilitaskamar"
+            android:layout_marginTop="20dp"
+            android:text="Simpan"
+            android:textColor="#ffffff"
+            android:background="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/hapus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lanjut"
+            android:layout_marginTop="5dp"
+            android:text="hapus"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
