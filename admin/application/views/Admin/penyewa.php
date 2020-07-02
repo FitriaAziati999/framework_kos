@@ -150,15 +150,19 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="../../index3.html" class="brand-link">
-                <span class="brand-text font-weight-light">Admin</span>
+                <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminLTE 3</span>
             </a>
 
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar user (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
                     <div class="info">
-                        <a href="#" class="d-block"><i class="fas fa-user"></i>&nbsp;<?= $this->session->userdata('nama'); ?></a>
+                        <a href="#" class="d-block">Alexander Pierce</a>
                     </div>
                 </div>
 
@@ -168,7 +172,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link active">
+                            <a href="<?= base_url('home') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-code"></i>
                                 <p>
                                     Admin
@@ -176,7 +180,7 @@
                             </a>
                         </li>
                         <li class="nav-item has-treeview menu-open">
-                            <a href="<?= base_url('home/pemilik') ?>" class="nav-link">
+                            <a href="<?= base_url('home/pemilik') ?>" class="nav-link active">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>
                                     Pemilik
@@ -232,36 +236,42 @@
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Username</th>
-                                                <th>No Admin</th>
-                                                <th>Alamat</th>
-                                                <th>Image</th>
+                                                <th>Nama Penyewa</th>
+                                                <th>Alamat Penyewa</th>
+                                                <th>No Penyewa</th>
+                                                <th>Email Penyewa</th>
+                                                <th>NIK Penyewa</th>
+                                                <th>Pekerjaan Penyewa</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php foreach ($admin as $data) : ?>
+                                            <?php foreach ($penyewa as $data) : ?>
                                                 <tr>
-                                                    <td><?= $data['useradmin']; ?></td>
-                                                    <td><?= $data['noadmin']; ?></td>
-                                                    <td><?= $data['alamatadmin']; ?></td>
-                                                    <td><img src="<?= base_url('assets/images/profile/') . $data['image']; ?>" alt="profile" width="60px"></td>
-                                                    <td><?php if ($data['is_activate'] == 1) { ?><a href="<?= base_url('home/updateStatus/') . $data['id_admin'] ?>" class="btn btn-primary">Aktif</a><?php } else { ?><a href="<?= base_url('home/updateStatus/') . $data['id_admin'] ?>" class="btn btn-danger">Tidak Aktif</a><?php } ?></td>
+                                                    <td><?= $data['namapen']; ?></td>
+                                                    <td><?= $data['alamatpen']; ?></td>
+                                                    <td><?= $data['nopen']; ?></td>
+                                                    <td><?= $data['emailpen']; ?></td>
+                                                    <td><?= $data['nikpen']; ?></td>
+                                                    <td><?= $data['pekerjaanpen']; ?></td>
+                                                    <td><a href="<?= base_url('home/hapus_penyewa/') . $data['id_penyewa'] ?>" onclick="return confirm('Apakah anda Yakin ?')" class=" badge badge-danger">Hapus</a>
+                                                    </td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Username</th>
-                                                <th>No Admin</th>
-                                                <th>Alamat</th>
-                                                <th>Image</th>
+                                                <th>Nama Penyewa</th>
+                                                <th>Alamat Penyewa</th>
+                                                <th>No Penyewa</th>
+                                                <th>Email Penyewa</th>
+                                                <th>NIK Penyewa</th>
+                                                <th>Pekerjaan Penyewa</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </tfoot>
                                     </table>
-                                </div>
-                                <!-- /.card-body -->
+                                </div> <!-- /.card-body -->
                             </div>
                             <!-- /.card -->
                         </div>

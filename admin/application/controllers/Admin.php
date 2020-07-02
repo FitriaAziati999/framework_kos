@@ -36,7 +36,7 @@ class Admin extends CI_Controller
         if ($con) {
             if ($con['is_activate'] == 1) {
                 if (password_verify($password, $con['passadmin'])) {
-                    $data = ['email' => $con['emailadmin']];
+                    $data = ['email' => $con['emailadmin'], 'nama' => $con['useradmin']];
                     $this->session->set_userdata($data);
 
                     redirect('home');
