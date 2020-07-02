@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kos.KostKita.adapter.RecyclerViewAdapter;
+import com.kos.KostKita.config.Auth;
+import com.kos.KostKita.config.ServerApi;
 import com.kos.KostKita.model.Data;
 
 import org.json.JSONArray;
@@ -41,66 +44,90 @@ import java.util.Objects;
 
 import okhttp3.internal.Util;
 
-public class DataActivity extends RecyclerView.Adapter<DataActivity.HolderData> {
-	private List<ModalData> mItems;
-	private Context context;
-	private OnHistoryClickListener listener;
-
-	public interface OnHistoryClickListener{
-		public void onClick(int position);
+public class DataActivity extends AppCompatActivity {
+	RecyclerView recyclerView;
+	List<Data> mItems;
+	String data;
+	Button btnTambah;
+	RecyclerViewAdapter mAdapter;
+	Auth authdataa;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_data_kos);
+		recyclerView = findViewById(R.id.recycleview_id);
+		btnTambah = findViewById(R.id.tambahkos);
+		btnTambah.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent a = new Intent(DataActivity.this, TambahDataKos.class);
+				startActivity(a);
+			}
+		});
+		authdataa = new Auth(this);
+		loaddata();
 	}
 
-	public void setListener(OnHistoryClickListener listener) {
-		this.listener = listener;
-	}
-
-	public DataActivity(Context context, List<ModalData> mItems)
+	public void loaddata()
 	{
-		this.context = context;
-		this.mItems = mItems;
-	}
-	@NonNull
-	@Override
-	public HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-		View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_data_kos, parent, false);
-		HolderData holderData = new DataActivity.HolderData(layout, listener);
-		return holderData;
-	}
+		StringRequest senddata = new StringRequest(Request.Method.GET, ServerApi.URL_DATAKOS
+				+authdataa.getKodeUser(), new Response.Listener<String>(){
+			@Override
+			public void onResponse(String response) {
+				JSONObject res = null;
+				try {
+					JSONObject obj  = new JSONObject(response);
 
-	@Override
-	public void onBindViewHolder(@NonNull final HolderData holder, int position) {
-		ModalData me = mItems.get(position);
-		holder.NamaKost.setText(me.getNamaKost());
-		holder.AlamatKost.setText(me.getAlamatKost());
-		holder.JenisKost.setText(me.getJeniskost());
-		holder.Stok.setText(me.getStok());
-	}
+					mItems = new ArrayList<>();
+					JSONArray data = obj.getJSONArray("data");
+					for (int i = 0; i < data.length(); i++)
+					{
+						Data playerModel = new Data();
+						JSONObject dataobj = data.getJSONObject(i);
+						playerModel.setNama_kos(dataobj.getString("namakos"));
+						playerModel.setAlamat_kos(dataobj.getString("alamatkos"));
+						playerModel.setKhusus_kos(dataobj.getString("khususkos"));
 
-	@Override
-	public int getItemCount() {
-		return mItems.size();
-	}
-
-	public static class HolderData extends RecyclerView.ViewHolder {
-		TextView NamaKost,AlamatKost, JenisKost, Stok;
-		public HolderData(@NonNull View itemView, final OnHistoryClickListener listener) {
-			super(itemView);
-			NamaKost = itemView.findViewById(R.id.NamaKost);
-			AlamatKost = itemView.findViewById(R.id.AlamatKost);
-			JenisKost = itemView.findViewById(R.id.JenisKost);
-			Stok = itemView.findViewById(R.id.stokKost);
-
-			itemView.setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					if(listener != null){
-						int position = getAdapterPosition();
-						if (position != RecyclerView.NO_POSITION){
-							listener.onClick(position);
-						}
+						mItems.add(playerModel);
 					}
+					setupListView();
+
 				}
-			});
-		}
+				catch (JSONException e)
+				{
+					e.printStackTrace();
+				}
+			}
+		},
+				new Response.ErrorListener()
+				{
+					@Override
+					public void onErrorResponse(VolleyError error) {
+						Log.d("volley", "errornya : " + error.getMessage());
+					}
+				});
+
+		RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+		requestQueue.add(senddata);
+	}
+
+	private void setupListView()
+	{
+		mAdapter = new RecyclerViewAdapter(this, mItems);
+		RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+		recyclerView.setLayoutManager(layoutManager);
+		recyclerView.setAdapter(mAdapter);
+
+		mAdapter.setListener(new RecyclerViewAdapter.OnHistoryClickListener() {
+			@Override
+			public void onClick(int position) {
+				Data modalRiwayat = mItems.get(position);
+				Toast.makeText(getApplicationContext(), modalRiwayat.getId_kos(), Toast.LENGTH_LONG).show();
+
+				Intent detail = new Intent(DataActivity.this, DetailDataKos.class);
+				detail.putExtra("id_kos", modalRiwayat.getId_kos());
+				startActivity(detail);
+			}
+		});
 	}
 }

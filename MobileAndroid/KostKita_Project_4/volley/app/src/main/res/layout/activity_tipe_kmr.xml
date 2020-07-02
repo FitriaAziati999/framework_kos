@@ -21,7 +21,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/fotokamar"
+            android:id="@+id/GambarKost"
             android:layout_width="match_parent"
             android:layout_height="230dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ganti foto"
-            android:layout_below="@id/fotokamar"/>
+            android:layout_below="@id/GambarKost"/>
 
 
         <EditText

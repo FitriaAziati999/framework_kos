@@ -10,6 +10,13 @@
 	android:paddingTop="80dp"
 	tools:context=".TambahDataKos">
 
+	<TextView
+		android:id="@+id/pemilikid"
+		android:text="id pemilik"
+		android:textSize="0sp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
 	<com.google.android.material.textfield.TextInputLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content">

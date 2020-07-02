@@ -1,93 +1,77 @@
 package com.kos.KostKita.config;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 
+import com.kos.KostKita.Beranda;
+import com.kos.KostKita.LoginActivity;
+import com.kos.KostKita.MainActivity;
+
 public class Auth {
-    private static Auth mInstance;
-    public static Context mCtx;
+    SharedPreferences sharedPreferences;
+    public Context mCtx;
+
     public static final String SHARED_PREF_NAME = "kos4";
     private static final String sudahlogin = "n";
+    public SharedPreferences.Editor editor;
 
     private static final String id_pemilik = "id_pemilik";
-    private static final String id_kos = "id_kos";
-    private static final String ukuran = "ukuran";
-    private static final String stok = "stok";
-    private static final String harga = "harga";
-    private static final String kapasitas = "penghuni";
-    private static final String fasilitaskamar = "fasilitaskamar";
+    private static final String nama_pemilik = "namapem";
+    private static final String foto_pemilik = "fotopem";
+    private static final String akses_data = "akses_data";
+    private static final String status_user = "status";
+    private static final String token = "token";
+    public static final String LOGIN_STATUS = "LOGIN_STATUS";
 
 
 
 
-    private Auth(Context context){
-        mCtx = context;
-    }
-    public static synchronized Auth getInstance(Context context){
-        if (mInstance == null){
-            mInstance = new Auth(context);
-        }
-        return mInstance;
+    public Auth(Context context){
+        this.mCtx = context;
+        sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
     }
 
-    public boolean setdatauser(String xpemilik, String xkos, String xukuran, String xstok,String xharga,String xkapasitas,String xfasilitaskamar){
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+    public void setdatauser(String xstatus, String xpemilik, String xnama, String xfoto, String tokennya){
 
+        editor.putBoolean(LOGIN_STATUS, true);
         editor.putString(id_pemilik, xpemilik);
-        editor.putString(id_kos, xkos);
-        editor.putString(ukuran,xukuran);
-        editor.putString(stok,xstok);
-        editor.putString(harga,xharga);
-        editor.putString(kapasitas,xkapasitas);
-        editor.putString(fasilitaskamar,xfasilitaskamar);
+        editor.putString(nama_pemilik, xnama);
+        editor.putString(foto_pemilik, xfoto);
+        editor.putString(status_user, xstatus);
+        editor.putString(sudahlogin, "y");
+        editor.putString(token, tokennya);
         editor.apply();
-
-        return true;
     }
 
 
 
 
-    public boolean ceklogin(){
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        if(sharedPreferences.getString(id_pemilik, null)!=null){
-            return true;
-        }
-        return false;
+    public boolean isLogin(){
+        return sharedPreferences.getBoolean(LOGIN_STATUS, false);
     }
 
-    public boolean logout(){
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+    public void logout(){
         editor.clear();
-        editor.apply();
-        return true;
+        editor.commit();
+
+        Intent login = new Intent(mCtx, LoginActivity.class);
+        mCtx.startActivity(login);
+        ((Beranda)mCtx).finish();
     }
 
     public String getKodeUser() {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString(id_pemilik, null);
     }
-    public String getUkuran() {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString(ukuran, null);
+    public String getNama() {
+        return sharedPreferences.getString(nama_pemilik, null);
     }
-    public String getStok() {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString(stok, null);
+    public String getAksesData() {
+        return sharedPreferences.getString(akses_data, null);
     }
-    public String getHarga() {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString(harga, null);
-    }
-    public String getKapasitas() {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString(kapasitas, null);
-    }
-    public String getFasilitaskamar() {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString(fasilitaskamar, null);
+    public String getFoto_pemilik() {
+        return sharedPreferences.getString(foto_pemilik, null);
     }
 
 }

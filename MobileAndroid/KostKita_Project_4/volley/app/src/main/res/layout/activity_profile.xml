@@ -5,6 +5,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+	android:id="@+id/activity_profile"
     tools:context=".ProfileActivity">
 
 	<View
@@ -34,6 +35,16 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="@+id/vbg" />
+
+	<TextView
+		android:id="@+id/pathfoto"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:textSize="0sp"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/profilename" />
 
 	<TextView
 		android:id="@+id/profilename"
@@ -131,7 +142,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_below="@id/textView5"
-			android:text="085335718044"
+			android:text="-"
 			android:textSize="16dp" />
 		----------------------------------------------------------
 
@@ -150,7 +161,8 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_below="@id/textView7"
-			android:text="085336055"
+			android:text="-"
+			android:inputType="textEmailAddress"
 			android:textSize="16dp" />
 		----------------------------------------------------------
 
@@ -188,7 +200,8 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_below="@id/textView10"
-			android:text="qqqqq"
+			android:text="-"
+			android:inputType="number"
 			android:textSize="16dp" />
 		----------------------------------------------------------
 
@@ -253,7 +266,7 @@
 			android:layout_marginTop="50dp"
 			android:layout_marginEnd="10dp"
 			android:layout_marginRight="10dp"
-			android:text="LOG OUT"
+			android:text="Kembali"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintTop_toTopOf="parent"
 			/>

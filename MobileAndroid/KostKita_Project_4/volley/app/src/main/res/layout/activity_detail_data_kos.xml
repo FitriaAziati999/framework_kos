@@ -20,26 +20,11 @@
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent" />
 
-		<ImageView
-			android:id="@+id/GambarKost"
-			android:layout_width="match_parent"
-			android:layout_height="230dp"
-			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintHorizontal_bias="0.489"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toTopOf="parent" />
-
-		<Button
-			android:id="@+id/btn_foto"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="Ganti foto"
-			android:layout_below="@id/GambarKost"/>
-
 
 		<EditText
 			android:id="@+id/namakost"
 			android:hint="Nama Kost"
+			android:layout_marginTop="80dp"
 			android:layout_marginRight="20dp"
 			android:layout_marginLeft="20dp"
 			android:layout_width="match_parent"
@@ -98,17 +83,9 @@
 			android:layout_height="wrap_content"
 			android:layout_below="@id/peraturankost"
 			android:layout_marginTop="20dp"
-			android:text="Simpan"
+			android:text="Lanjut"
 			android:textColor="#ffffff"
 			android:background="@color/colorAccent"/>
-
-		<Button
-			android:id="@+id/hapus"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_below="@+id/lanjut"
-			android:layout_marginTop="0dp"
-			android:text="hapus"/>
 
 	</RelativeLayout>
 

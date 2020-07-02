@@ -4,26 +4,36 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:orientation="vertical"
 	tools:context=".DataActivity">
 
-	<androidx.recyclerview.widget.RecyclerView
-		android:id="@+id/recycleview_id"
+	<ScrollView
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:layout_marginTop="16dp"
-		android:layout_marginRight="16dp"
-		android:layout_marginLeft="16dp"
-		tools:listitem="@layout/activity_list_data_kost"/>
+		android:layout_height="match_parent">
 
-	<com.google.android.material.floatingactionbutton.FloatingActionButton
-		android:id="@+id/btn_add"
-		android:layout_gravity="bottom|end"
-		android:clickable="true"
-		android:layout_margin="16dp"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:src="@drawable/ic_add_white_24dp"/>
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/recycleview_id"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				tools:listitem="@layout/activity_list_data_kost" />
+
+			<Button
+				android:id="@+id/tambahkos"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Tambah"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/recycleview_id" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</ScrollView>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
