@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class Home1 extends CI_Controller
 {
 
     public function __construct()
@@ -44,12 +44,12 @@ class Home extends CI_Controller
     public function updateStatus($id)
     {
         $this->admin->setStatus($id);
-        redirect('home');
+        redirect('home1');
     }
     public function hapus($id)
     {
         $this->db->delete('pemilik', ['id_pemilik' => $id]);
-        redirect('home/pemilik');
+        redirect('home1/pemilik');
     }
     public function edit()
     {
@@ -69,12 +69,12 @@ class Home extends CI_Controller
         $this->db->where('id_pemilik', $id);
         $this->db->update('pemilik', $edit);
 
-        redirect('home/pemilik');
+        redirect('home1/pemilik');
     }
     public function hapus_penyewa($id)
     {
         $this->db->delete('penyewa', ['id_penyewa' => $id]);
-        redirect('home/penyewa');
+        redirect('home1/penyewa');
     }
     public function update_sewa($id)
     {
@@ -84,6 +84,6 @@ class Home extends CI_Controller
         $this->db->where('id_sewa', $id);
         $this->db->update('sewa', $edit);
 
-        redirect('home/sewa');
+        redirect('home1/sewa');
     }
 }

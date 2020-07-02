@@ -39,7 +39,7 @@ class Admin extends CI_Controller
                     $data = ['email' => $con['emailadmin'], 'nama' => $con['useradmin']];
                     $this->session->set_userdata($data);
 
-                    redirect('home');
+                    redirect('Home1');
                 } else {
                     $this->session->set_flashdata('massage', '<div class="alert alert-danger" role="alert">
             Password Wrong!</div>');
