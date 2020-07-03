@@ -7,35 +7,40 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.kos.KostKita.config.Auth;
+import com.kos.KostKita.model.Data;
+
 public class Beranda extends AppCompatActivity {
 
     Button Mprofil, Mdata, Mtipe, Mnotif, Mlogout;
+    Auth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beranda);
 
-        Mprofil = (Button)findViewById(R.id.tmblProfil);
-        Mdata = (Button)findViewById(R.id.tmblDataKos);
-        Mtipe = (Button)findViewById(R.id.tmblTipeKamar);
-        Mnotif = (Button)findViewById(R.id.tmblNotifikasi);
-        Mlogout = (Button)findViewById(R.id.tmblLogout);
+        auth = new Auth(this);
+
+        Mprofil = (Button) findViewById(R.id.tmblProfil);
+        Mdata = (Button) findViewById(R.id.tmblDataKos);
+        Mtipe = (Button) findViewById(R.id.tmblTipeKamar);
+        Mnotif = (Button) findViewById(R.id.tmblNotifikasi);
+        Mlogout = (Button) findViewById(R.id.tmblLogout);
 
         Mprofil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent profil = new Intent(getApplicationContext(),ProfileActivity.class);
+                Intent profil = new Intent(getApplicationContext(), ProfileActivity.class);
                 startActivity(profil);
-                finish();
             }
         });
 
         Mdata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(),DetailDataKos.class);
-                startActivity(data);
+                Intent z = new Intent(getApplicationContext(), DataActivity.class);
+                startActivity(z);
                 finish();
             }
         });
@@ -43,7 +48,7 @@ public class Beranda extends AppCompatActivity {
         Mnotif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent notif = new Intent(getApplicationContext(),Notif.class);
+                Intent notif = new Intent(getApplicationContext(), Notif.class);
                 startActivity(notif);
                 finish();
             }
@@ -52,9 +57,16 @@ public class Beranda extends AppCompatActivity {
         Mtipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tipe = new Intent(getApplicationContext(),TipeKmr.class);
+                Intent tipe = new Intent(getApplicationContext(), TipeKmr.class);
                 startActivity(tipe);
                 finish();
+            }
+        });
+
+        Mlogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.logout();
             }
         });
 

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sending Data</string>
+    <string name="menu_home" />
+    <string name="menu_gallery" />
+    <string name="menu_slideshow" />
+    <string name="action_settings" />
+    <string name="home_second" />
+</resources>

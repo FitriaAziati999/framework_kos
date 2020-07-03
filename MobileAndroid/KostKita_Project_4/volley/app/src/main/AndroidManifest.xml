@@ -15,7 +15,9 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".TipeKmr"></activity>
         <activity android:name=".DetailDataKos" />
+        <activity android:name=".DataActivity" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".TambahDataKos" />
         <activity android:name=".Notif" />
         <activity android:name=".Beranda" />
         <activity android:name=".RegisterActivity" />
